@@ -1,0 +1,69 @@
+/* Bakgrundsbild för hela sidan */
+body {
+  background-image: url("https://images.unsplash.com/photo-1470406601945-7a6890b947b6?q=80&w=2970&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  height: 100vh;
+}
+
+/* Innehållsområde */
+#bbq-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Meny-objekt */
+.menu-item {
+  background-color: rgba(121, 121, 121, 0.8);
+  border-radius: 10px;
+  text-align: center;
+  padding: 20px;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 300px; /* Justera bredden */
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* För bilder */
+.menu-item img {
+  width: 100%; /* Gör så att bilderna tar upp hela bredden på kortet */
+  height: 200px; /* Justera höjden på bilderna */
+  object-fit: cover; /* Se till att bilden täcker området utan att förvrängas */
+  border-radius: 10px;
+  margin-bottom: 10px; /* Lite mellanrum under bilden */
+}
+
+.menu-item h3,
+.menu-item p {
+  color: #ffffff;
+  margin: 10px 0;
+}
+
+/* ----- MEDIA QUERYS ----  */
+@media (max-width: 1024px) {
+  #content {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  #content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  #content {
+    grid-template-columns: 1fr;
+  }
+}
