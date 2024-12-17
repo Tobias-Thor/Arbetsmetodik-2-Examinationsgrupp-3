@@ -1,0 +1,42 @@
+.navbar .toggle-button {
+  z-index: 1000;
+  position: absolute;
+  top: 5rem;
+  right: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+}
+
+.navbar .toggle-button .bar {
+  height: 3px;
+  width: 100%;
+  background-color: #b59410;
+  border-radius: 10px;
+  transition: transform 0.2s linear;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .navbar .toggle-button {
+    display: flex;
+  }
+  .navbar .toggle-button.active .bar-1 {
+    transform: rotate(45deg) translate(6.5px, 6.5px);
+  }
+  .navbar .toggle-button.active .bar-2 {
+    opacity: 0;
+  }
+  .navbar .toggle-button.active .bar-3 {
+    transform: rotate(-45deg) translate(6.5px, -6.5px);
+  }
+  .navbar-links {
+    display: none;
+    width: 100%;
+  }
+}
