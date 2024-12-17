@@ -1,12 +1,234 @@
 body {
-    background-color: black;
-    color: white;
+    background-image: url("https://images.unsplash.com/photo-1470406601945-7a6890b947b6?q=80&w=2970&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    height: 100vh;
+  }
+
+  .main_image {
+    display: block; /* Gör bilden blocknivå för att möjliggöra centering */
+    margin: 0 auto; /* Centrera horisontellt */
+    max-width: 100%; /* Anpassa bilden till förälderns bredd */
+    height: auto; /* Bevara bildens proportioner */
+    filter: sepia(50%); /* Gör bilden 50% sepia-tonad */
+    opacity: 0.8; /* Gör bilden 80% synlig (20% genomskinlig) */
+    transition: filter 0.3s ease, opacity 0.3s ease; /* Mjuk övergång för filterändringar */
+}
+ 
+.main_image:hover {
+    filter: sepia(0%) brightness(1.2); /* Återställ sepia och gör bilden ljusare vid hover */
+    opacity: 1; /* Gör bilden helt synlig vid hover */
 }
 
 h1 {
-    color: darkorange;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    font-style: oblique;
+    color: darkorange; /* Base text color */
+    text-align: center;
+    background-color: rgba(15, 15, 15, 0.1);
+    padding: 10px; /* Add some padding for spacing */
+    text-shadow: 
+        0 0 10px orange,   /* Inner glow */
+        0 0 20px red,      /* Outer red glow */
+        0 0 30px darkorange, /* Outer orange glow */
+        0 0 40px crimson;  /* Further red glow */
+    background: linear-gradient(90deg, red, orange, yellow); /* Gradient fire colors */
+    -webkit-background-clip: text; /* Clip background to text */
+    -webkit-text-fill-color: transparent; /* Make text transparent to show gradient */
+    animation: fiery-glow 1.5s infinite alternate; /* Animate the glowing effect */
 }
 
-footer {
-    background-color: rgba(0, 0, 0, 0.5);
+p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: whitesmoke;
+    margin: 20px auto; /* Centrerar texten med bra marginal */
+    max-width: 800px; /* Begränsar bredden för läsbarhet */
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-left: 5px solid darkorange; /* Dekorativ linje */
 }
+
+blockquote {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.3em;
+    font-weight: bold;
+    color: darkorange;
+    margin: 20px auto;
+    max-width: 700px;
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-left: 5px solid crimson;
+    border-radius: 5px;
+    text-align: center;
+}
+
+/* Keyframes for glowing animation */
+@keyframes fiery-glow {
+    0% {
+        text-shadow: 
+            0 0 10px orange, 
+            0 0 20px red, 
+            0 0 30px darkorange, 
+            0 0 40px crimson;
+    }
+    50% {
+        text-shadow: 
+            0 0 20px orange, 
+            0 0 30px red, 
+            0 0 40px yellow, 
+            0 0 50px crimson;
+    }
+    100% {
+        text-shadow: 
+            0 0 10px darkorange, 
+            0 0 20px red, 
+            0 0 30px crimson, 
+            0 0 40px orange;
+    }
+}
+
+/* Innehållsområde */
+#bbq-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  /* Meny-objekt */
+.menu-item {
+    background-color: rgba(121, 121, 121, 0.8);
+    border-radius: 10px;
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 300px; /* Justera bredden */
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+
+  /* För bilder */
+.menu-item img {
+    width: 100%; /* Gör så att bilderna tar upp hela bredden på kortet */
+    height: 200px; /* Justera höjden på bilderna */
+    object-fit: cover; /* Se till att bilden täcker området utan att förvrängas */
+    border-radius: 10px;
+    margin-bottom: 10px; /* Lite mellanrum under bilden */
+  }
+  
+  .menu-item h3,
+  .menu-item p {
+    color: #ffffff;
+    margin: 10px 0;
+  }
+
+footer {
+    position: fixed; /* Fixera footern längst ned */
+    bottom: 0; /* Placera den vid botten */
+    left: 0; /* Se till att footern sträcker sig över hela bredden */
+    width: 100%; /* Gör footern lika bred som skärmen */
+    background-color: rgba(100, 100, 100, 0.5);
+    padding: 7px; /* Lägg till lite utrymme runt ikoner och text */
+    z-index: 1000; /* Se till att footern är överst */
+    display: flex;
+    justify-content: left; /* Se till att det finns utrymme mellan ikoner och text */
+    align-items: center;
+    flex-wrap: wrap; /* Gör footern responsiv */
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+footer a {
+    text-decoration: none; /* Ta bort understrykning */
+    margin: 0 10px; /* Mellanrum mellan ikoner */
+}
+
+footer .fa-brands {
+    color: whitesmoke;
+    font-size: 1.8rem;
+    transition: color 0.3s ease; /* Mjuk övergång för hover */
+}
+
+footer .fa-brands:hover {
+    color: darkorange; /* Ändra färg vid hover */
+}
+
+footer .footer_p {
+    color: whitesmoke; /* Standardfärg */
+    text-align: right; /* Justera texten till höger */
+    transition: color 0.3s ease; /* Mjuk övergång för hover */
+    word-wrap: break-word; /* Bryt långa ord och text */
+    overflow-wrap: break-word; /* Samma som word-wrap, för att bryta ord */
+    max-width: 50%; /* Sätt max-bredd för att undvika att texten går utanför */
+    display: block;
+    flex-grow: 1;
+}
+
+/* Ändra färg vid hover */
+footer .footer_p:hover {
+    color: darkorange; 
+}
+
+/* Media query för att gömma texten på små skärmar */
+@media (max-width: 768px) {
+    footer .footer_p {
+        display: none; /* Dölj texten på skärmar mindre än 768px */
+    }
+}
+
+/* ----- MEDIA QUERYS ----  */
+@media (max-width: 1024px) {
+    #content {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    #content {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 480px) {
+    #content {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  /* /* Footer /
+footer {
+  background-color: rgba(255, 255, 255, 0.5);
+  color: white;
+  justify-content: space-between; / För att hålla ikoner och adress på varsin sida /
+}
+
+/ Ikoner i footern /
+.social-icons {
+  display: flex;
+  gap: 20px; / Lägg till lite avstånd mellan ikonerna /
+}
+
+footer i {
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+footer i:hover {
+  color: #ff6347;
+}
+
+/ Adressen /
+.adress {
+  text-align: right; / Justera adressen till höger 
+} */
