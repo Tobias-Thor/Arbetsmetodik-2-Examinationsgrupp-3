@@ -1,38 +1,101 @@
+<!-- Specifies the document type as HTML5 -->
 <!DOCTYPE html>
+<!-- Defines the root element of the document and sets the language to English -->
 <html lang="en">
+
+<!-- Contains metadata and links for the document -->
 <head>
+        <!-- Specifies the character encoding for the document as UTF-8 -->
     <meta charset="UTF-8">
+        <!-- Ensures proper display and responsiveness on all devices -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Specifies the author of the document -->
     <meta name="author" content="Taverna BBQ & Steakhouse Team">
+        <!-- Provides a brief summary of the webpage content for search engines -->
     <meta name="description" content="Taverna American BBQ & Steakhouse – A bold transformation with over 40 years of culinary excellence, now focusing on authentic American BBQ. Grand reopening in early 2025!">
+        <!-- Lists keywords relevant to the webpage for search engine optimization -->
     <meta name="keywords" content="Taverna, BBQ, steakhouse, American cuisine, restaurant, grand reopening, food, grill, culinary excellence">
+        <!-- Instructs search engines to index the page and follow its links -->
     <meta name="robots" content="index, follow">
 
     <!-- OpenGraph metadata for social media previews -->
+        <!-- Specifies the title displayed in social media previews -->
     <meta property="og:title" content="Taverna American BBQ & Steakhouse">
+        <!-- Provides a brief description for social media previews -->
     <meta property="og:description" content="Discover a new era of flavor and community at Taverna. From Italian classics to bold American BBQ – grand reopening in early 2025!">
+        <!-- Specifies the image used in social media previews -->
     <meta property="og:image" content="images/logo-500px.webp">
+        <!-- Links to the webpage in social media previews -->
     <meta property="og:url" content="https://www.taverna-bbq.com">
+        <!-- Declares the content type for OpenGraph as a website -->
     <meta property="og:type" content="website">
     
+    <!-- Defines the title of the webpage, displayed in the browser tab -->
     <title>Taverna American BBQ & Steakhouse</title>
+    
+    <!-- Links the external CSS file for styling -->
     <link rel="stylesheet" href="main.css">
+    
+    <!-- Sets the favicon for the webpage -->
     <link rel="icon" href="images/logoORfaviconMAYBE.ico" type="image/x-icon">
+    
     <!--Link to Fontawesome website for the social media icons in the footer-->
+        <!-- Ensures access to FontAwesome icons -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+    <!-- Preconnects to Google Fonts to improve loading performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
+        <!-- Allows preloading of font-related resources from Google -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <!-- Links custom fonts from Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Lobster&family=Mystery+Quest&family=Permanent+Marker&display=swap" rel="stylesheet">
 </head>
 
+<!-- Defines the main content of the document -->
 <body>
+    
+    <!-- Container for the navigation bar -->
+    <header class="navbar">
+        <!-- Defines a section for the logo -->
+        <section class="logo">
+          <!-- Links the logo to the homepage -->
+          <a href="index.html">
+            <!-- Placeholder for the logo image -->
+            <img src="images/logo-500px.webp" alt="logo" />
+          </a>
+        </section>
+        <!-- Toggle button for responsive navigation -->
+        <a href="#" class="toggle-button">
+            <!-- First bar of the toggle button -->
+          <span class="bar bar-1"></span>
+            <!-- Second bar of the toggle button -->
+          <span class="bar bar-2"></span>
+            <!-- Third bar of the toggle button -->
+          <span class="bar bar-3"></span>
+        </a>
+        <!-- Defines the navigation menu -->
+        <nav class="navbar-links">
+            <!-- Contains the list of navigation links -->
+          <ul>
+            <!-- Placeholder for navigation link -->
+            <li><a href="index.html">Menu</a></li>
+            <li><a href="index.html">Featured Beverages and Foods</a></li>
+          </ul>
+        </nav>
+      </header>
+
+    <!-- Additional header for the page -->
     <header>
+            <!-- Displays the main logo with alt text for accessibility -->
         <img class="main_image" src="images/logo-500px.webp" alt="Taverna American BBQ logo" aria-label="Taverna Logo">
+            <!-- Main heading for the page -->
         <h1>🍖Taverna American BBQ & Steakhouse🍖</h1>
     </header>
 
+    <!-- Contains the main content of the page -->
     <main>
+        <!-- Introduction paragraph -->
         <p>Welcome to Taverna – A New Era of Flavor and Community!
 
             With over 40 years of culinary excellence, 
@@ -62,8 +125,10 @@
             after-work gathering, or a festive evening 
             with friends.</p>
         
+        <!-- Highlights the reopening announcement -->
         <blockquote>Grand reopening in early 2025 – An experience worth the wait.</blockquote>
         
+    <!-- Call-to-action for visitors -->
     <p> Stay tuned and get ready to let your 
         taste buds dance in an atmosphere 
         that celebrates both 
@@ -73,28 +138,43 @@
         togetherness. 
         We can’t wait to welcome you!
     </p>
-    
+
+    <section id="featured-container" class="featured-items">
+        <!-- Dagens featured kommer att genereras här -->
+    </section>
+      
+    <!-- Section for BBQ offerings -->
     <section id="bbq-container" aria-labelledby="bbq-container-heading">
+        <!-- Heading for the BBQ offerings section -->
         <h2 id="bbq-container-heading">Explore Our BBQ Experience</h2>
-        <!-- Add content about your BBQ offerings here -->
     </section>
 </main>
 
+    <!-- Defines the footer content -->
     <footer class="footer_object">
+        <!-- Navigation for social media links -->
         <nav aria-label="Social media links">
+            <!-- Icon for Facebook -->
             <a href="https://www.facebook.com" target="_blank" class="social-link" aria-label="Visit our Facebook page">
                 <i class="fa-brands fa-facebook"></i>
             </a>
+            <!-- Icon for Instagram -->
             <a href="https://www.instagram.com" target="_blank" class="social-link" aria-label="Visit our Instagram profile">
                 <i class="fa-brands fa-instagram"></i>
             </a>
+            <!-- Icon for YouTube -->
             <a href="https://www.youtube.com" target="_blank" class="social-link" aria-label="Visit our YouTube channel">
                 <i class="fa-brands fa-youtube"></i>
             </a>
+            <!-- Address for the restaurant -->
             <address class="adr_1">Taverna American BBQ & Steakhouse, Barbeque St. 1 Springfield</address>
         </nav>
     </footer>
+    
+    <!-- Links an external JavaScript file for database interactions -->
     <script src="db.js"></script>
+    <!-- Links an external JavaScript file for main functionality -->
     <script src="main.js"></script>
+    
 </body>
 </html>

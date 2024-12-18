@@ -1,3 +1,4 @@
+/* STYLING FOR BODY */
 body {
     background-image: url("https://images.unsplash.com/photo-1470406601945-7a6890b947b6?q=80&w=2970&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
     background-size: cover;
@@ -8,12 +9,116 @@ body {
     height: 100vh;
   }
 
+  /* GOOGLE FONT */
   .amatic-sc-regular {
     font-family: "Amatic SC", serif;
     font-weight: 400;
     font-style: normal;
   }
+
+  /* NAVBAR STYLING */
+  .navbar {
+    background-color: rgba(43, 19, 7, 0.5);
+    position: sticky;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .navbar .logo {
+    font-size: 1.5rem;
+    margin: 0.5rem;
+  }
+  .navbar .logo img {
+    width: 50%;
+  }
+  .navbar .navbar-links ul {
+    color: #ffa500;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    font-size: 1.5rem;
+  }
+  .navbar .navbar-links ul li {
+    list-style: none;
+    transition: background-color 0.1s ease;
+    border-radius: 100px;
+    margin-left: 5px;
+  }
+  .navbar .navbar-links ul li a {
+    padding: 1rem;
+    /* display: block; */
+    display: inline-block;
+    text-decoration: none;
+    color: #ffa500;
+  }
+  .navbar .navbar-links ul li:hover {
+    background-color: #53201f;
+  }
   
+  .navbar .toggle-button {
+    z-index: 1000;
+    position: absolute;
+    top: 5rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+  }
+  
+  .navbar .toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: #ffa500;
+    border-radius: 10px;
+    transition: transform 0.2s linear;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .navbar .toggle-button {
+      display: flex;
+    }
+    .navbar .toggle-button.active .bar-1 {
+      transform: rotate(45deg) translate(6.5px, 6.5px);
+    }
+    .navbar .toggle-button.active .bar-2 {
+      opacity: 0;
+    }
+    .navbar .toggle-button.active .bar-3 {
+      transform: rotate(-45deg) translate(6.5px, -6.5px);
+    }
+    .navbar-links {
+      display: none;
+      width: 100%;
+    }
+    .navbar-links ul {
+      width: 100%;
+      flex-direction: column;
+    }
+    .navbar-links li {
+      text-align: center;
+    }
+    .navbar-links li a {
+      width: 100%;
+      padding: 0.5rem 1rem;
+      margin: 0;
+    }
+    .navbar-links li:hover {
+      background-color: #3a1a0a;
+      border-radius: 1px;
+      width: 100%;
+    }
+    .navbar-links.active {
+      display: flex;
+    }
+  }
+  
+  /* STYLING FOR LOGO IMAGE */
   .main_image {
     display: block; /* Gör bilden blocknivå för att möjliggöra centering */
     margin: 0 auto; /* Centrera horisontellt */
@@ -29,6 +134,7 @@ body {
     opacity: 1; /* Gör bilden helt synlig vid hover */
 }
 
+/* STYLINGS FOR HEADINGS & BLOCKQUOTE */
 h1, h2 {
     font-family: "Amatic SC", serif;
     font-weight: bolder;
@@ -37,7 +143,7 @@ h1, h2 {
     text-align: center;
     padding: 10px; /* Lite padding för mellanrum */
     border-radius: 5px;
-    background-color: rgba(121, 121, 121, 0.8); /* Bakgrundsfärg */
+    background-color: rgba(43, 19, 7, 0.5);
     text-shadow: 
         0 0 10px orange,   /* Inner glow */
         0 0 20px red,      /* Yttre röd glöd */
@@ -67,7 +173,7 @@ blockquote {
     animation: fiery-glow 1.5s infinite alternate; /* Animerad glöd-effekt */
 }
 
-/* Keyframes för glödande animation */
+/* Keyframes for glowing "fire" animation */
 @keyframes fiery-glow {
     0% {
         text-shadow: 
@@ -92,6 +198,7 @@ blockquote {
     }
 }
 
+/* STYLINGS FOR PARAGRAPHS */
 p {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 1.1em;
@@ -100,11 +207,47 @@ p {
     margin: 20px auto; /* Centrerar texten med bra marginal */
     max-width: 800px; /* Begränsar bredden för läsbarhet */
     padding: 10px;
-    background-color: rgba(121, 121, 121, 0.8);
+    background-color: rgba(43, 19, 7, 0.5);
     border-radius: 5px;
 }
 
-/* Innehållsområde */
+/* STYLING FOR TODAYS FEATURED DISHES */
+.featured-item {
+  background-color: rgba(43, 19, 7, 0.5);
+  border: 5px ridge goldenrod;
+  text-align: center;
+  padding: 10px;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 300px;  
+  box-sizing: border-box;
+  overflow: hidden; 
+}
+
+.featured-item img {
+  width: 100%; /* Gör så att bilderna tar upp hela bredden på kortet */
+    height: 200px; /* Justera höjden på bilderna */
+    object-fit: cover; /* Se till att bilden täcker området utan att förvrängas */
+    border-radius: 10px;
+    margin-bottom: 10px; /* Lite mellanrum under bilden */
+}
+
+.featured-item h3,
+  .featured-item p {
+    color: #ffffff;
+    margin: 10px 0;
+  }
+
+  .featured-item h4,
+  .featured-item p {
+    color: #ffffff;
+    margin: 10px 0;
+  }
+
+/* MAIN CONTENT AREA */
 #bbq-container {
     display: flex;
     flex-wrap: wrap;
@@ -113,9 +256,9 @@ p {
     padding: 20px;
   }
 
-  /* Meny-objekt */
+  /* Menu-object */
 .menu-item {
-    background-color: rgba(121, 121, 121, 0.8);
+    background-color: rgba(43, 19, 7, 0.5);
     border-radius: 10px;
     text-align: center;
     padding: 20px;
@@ -129,7 +272,7 @@ p {
     overflow: hidden;
   }
 
-  /* För bilder */
+  /* For images */
 .menu-item img {
     width: 100%; /* Gör så att bilderna tar upp hela bredden på kortet */
     height: 200px; /* Justera höjden på bilderna */
@@ -144,12 +287,30 @@ p {
     margin: 10px 0;
   }
 
+  .add-to-cart {
+    background-color: #761316;
+    color: #ffffff;
+    border: none;
+    border-radius: 20px;
+    margin-top: 5px;
+    padding: 15px 20px;
+  }
+  
+  .add-to-cart:hover {
+    font-weight: bold;
+    background-color: #ffffff;
+    color: #761316;
+  
+    cursor: pointer;
+  }
+
+  /* FOOTER STYLING */
   footer {
     position: fixed; /* Fixera footern längst ned */
     bottom: 0; /* Placera den vid botten */
     left: 0; /* Se till att footern sträcker sig över hela bredden */
     width: 100%; /* Gör footern lika bred som skärmen */
-    background-color: rgba(121, 121, 121, 0.8);
+    background-color: rgba(43, 19, 7, 0.5);
     padding: 7px; /* Lägg till lite utrymme runt ikoner och text */
     z-index: 1000; /* Se till att footern är överst */
     display: flex;
@@ -178,7 +339,8 @@ footer .fa-brands {
 }
 
 footer .fa-brands:hover {
-    color: darkorange; /* Ändra färg vid hover */
+    /* color: #53201f;  Ändra färg vid hover */
+    color: goldenrod;
 }
 
 footer .adr_1 {
@@ -191,7 +353,12 @@ footer .adr_1 {
     text-overflow: ellipsis; /* Visar "..." om texten är för lång */
 }
 
-/* Media query för att hantera små skärmar */
+footer .adr_1:hover {
+  /* color:#53201f; */
+  color: goldenrod;
+}
+
+/* Media query (FOR FOOTER) för att hantera små skärmar */
 @media (max-width: 768px) {
     .adr_1 {
         display: none; /* Dölj adressen på mindre skärmar */
