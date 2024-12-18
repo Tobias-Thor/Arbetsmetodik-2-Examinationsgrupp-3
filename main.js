@@ -20,7 +20,7 @@ const container = document.querySelector('.img-container');
 
 db.bbqs.forEach(item => {
 
-  const bbqItem = document.createElement('div');
+  const bbqItem = document.createElement('section');
   bbqItem.classList.add('bbq-item'); 
 
   
@@ -29,7 +29,7 @@ db.bbqs.forEach(item => {
   imageElement.alt = item.name;
 
   
-  const description = document.createElement('div');
+  const description = document.createElement('section');
   description.classList.add('description');
 
   
