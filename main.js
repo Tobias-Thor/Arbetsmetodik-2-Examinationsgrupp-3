@@ -20,9 +20,16 @@ function createCards(data) {
       <img src="${bbq.img}" alt="${bbq.name}">
       <h3>${bbq.name}</h3>
       <p>${bbq.dsc}</p>
-      <p><strong>Pris:</strong> $${bbq.price}</p>
-      <p><strong>Betyg:</strong> ${"⭐".repeat(bbq.rate)}</p>
-      <p><strong>Plats:</strong> ${bbq.country}</p>
+      <p><strong>Price:</strong> $${bbq.price}</p>
+      <p><strong>Rating:</strong> ${"⭐".repeat(bbq.rate)}</p>
+      <p><strong>Conutry:</strong> ${bbq.country}</p>
+      <button
+      class="add-to-cart"
+      data-product="${bbq.name}"
+      data-price="${bbq.price}"
+    >
+      Add to cart
+    </button>
     `;
 
     // Lägg till kortet i container

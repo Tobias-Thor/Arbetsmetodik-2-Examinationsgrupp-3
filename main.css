@@ -49,6 +49,23 @@ body {
   margin: 10px 0;
 }
 
+.add-to-cart {
+  background-color: #761316;
+  color: #ffffff;
+  border: none;
+  border-radius: 20px;
+  margin-top: 5px;
+  padding: 15px 20px;
+}
+
+.add-to-cart:hover {
+  font-weight: bold;
+  background-color: #ffffff;
+  color: #761316;
+
+  cursor: pointer;
+}
+
 /* ----- MEDIA QUERYS ----  */
 @media (max-width: 1024px) {
   #content {
