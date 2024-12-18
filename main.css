@@ -3,11 +3,17 @@ body {
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    font-family: Arial, sans-serif;
+    font-family: "Amatic SC", serif;
     padding: 20px;
     height: 100vh;
   }
 
+  .amatic-sc-regular {
+    font-family: "Amatic SC", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
   .main_image {
     display: block; /* Gör bilden blocknivå för att möjliggöra centering */
     margin: 0 auto; /* Centrera horisontellt */
@@ -23,52 +29,45 @@ body {
     opacity: 1; /* Gör bilden helt synlig vid hover */
 }
 
-h1 {
-    font-family: Arial, Helvetica, sans-serif;
+h1, h2 {
+    font-family: "Amatic SC", serif;
     font-weight: bolder;
     font-style: oblique;
-    color: darkorange; /* Base text color */
+    color: darkorange; /* Grundtextfärg */
     text-align: center;
-    background-color: rgba(15, 15, 15, 0.1);
-    padding: 10px; /* Add some padding for spacing */
+    padding: 10px; /* Lite padding för mellanrum */
+    border-radius: 5px;
+    background-color: rgba(121, 121, 121, 0.8); /* Bakgrundsfärg */
     text-shadow: 
         0 0 10px orange,   /* Inner glow */
-        0 0 20px red,      /* Outer red glow */
-        0 0 30px darkorange, /* Outer orange glow */
-        0 0 40px crimson;  /* Further red glow */
-    background: linear-gradient(90deg, red, orange, yellow); /* Gradient fire colors */
-    -webkit-background-clip: text; /* Clip background to text */
-    -webkit-text-fill-color: transparent; /* Make text transparent to show gradient */
-    animation: fiery-glow 1.5s infinite alternate; /* Animate the glowing effect */
-}
-
-p {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 1.1em;
-    line-height: 1.6;
-    color: whitesmoke;
-    margin: 20px auto; /* Centrerar texten med bra marginal */
-    max-width: 800px; /* Begränsar bredden för läsbarhet */
-    padding: 10px;
-    background-color: rgba(0, 0, 0, 0.2);
-    border-left: 5px solid darkorange; /* Dekorativ linje */
+        0 0 20px red,      /* Yttre röd glöd */
+        0 0 30px darkorange, /* Yttre orange glöd */
+        0 0 40px crimson;  /* Ytterligare röd glöd */
+    /* background: linear-gradient(90deg, red, orange, yellow); Gradient bakgrund */
+    animation: fiery-glow 1.5s infinite alternate; /* Animerad glöd-effekt */
 }
 
 blockquote {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Amatic SC", serif;
     font-size: 1.3em;
     font-weight: bold;
-    color: darkorange;
+    color: black;
     margin: 20px auto;
     max-width: 700px;
     padding: 15px;
-    background-color: rgba(0, 0, 0, 0.3);
-    border-left: 5px solid crimson;
+    background-color: rgba(121, 121, 121, 0.8); /* Bakgrundsfärg */
     border-radius: 5px;
     text-align: center;
+    text-shadow: 
+        0 0 10px orange,   /* Inner glow */
+        0 0 20px red,      /* Yttre röd glöd */
+        0 0 30px darkorange, /* Yttre orange glöd */
+        0 0 40px crimson;  /* Ytterligare röd glöd */
+    background: linear-gradient(90deg, red, orange, yellow); /* Gradient bakgrund */
+    animation: fiery-glow 1.5s infinite alternate; /* Animerad glöd-effekt */
 }
 
-/* Keyframes for glowing animation */
+/* Keyframes för glödande animation */
 @keyframes fiery-glow {
     0% {
         text-shadow: 
@@ -91,6 +90,18 @@ blockquote {
             0 0 30px crimson, 
             0 0 40px orange;
     }
+}
+
+p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: whitesmoke;
+    margin: 20px auto; /* Centrerar texten med bra marginal */
+    max-width: 800px; /* Begränsar bredden för läsbarhet */
+    padding: 10px;
+    background-color: rgba(121, 121, 121, 0.8);
+    border-radius: 5px;
 }
 
 /* Innehållsområde */
@@ -133,25 +144,31 @@ blockquote {
     margin: 10px 0;
   }
 
-footer {
+  footer {
     position: fixed; /* Fixera footern längst ned */
     bottom: 0; /* Placera den vid botten */
     left: 0; /* Se till att footern sträcker sig över hela bredden */
     width: 100%; /* Gör footern lika bred som skärmen */
-    background-color: rgba(100, 100, 100, 0.5);
+    background-color: rgba(121, 121, 121, 0.8);
     padding: 7px; /* Lägg till lite utrymme runt ikoner och text */
     z-index: 1000; /* Se till att footern är överst */
     display: flex;
-    justify-content: left; /* Se till att det finns utrymme mellan ikoner och text */
+    justify-content: space-between; /* Skapa utrymme mellan elementen */
     align-items: center;
     flex-wrap: wrap; /* Gör footern responsiv */
     border-radius: 20px;
     cursor: pointer;
+    box-sizing: border-box;
+}
+
+footer nav {
+    display: flex; /* Flexbox för sociala ikoner */
+    gap: 10px; /* Mellanrum mellan ikonerna */
+    flex-grow: 1; /* Se till att adressen trycks åt höger */
 }
 
 footer a {
     text-decoration: none; /* Ta bort understrykning */
-    margin: 0 10px; /* Mellanrum mellan ikoner */
 }
 
 footer .fa-brands {
@@ -164,26 +181,20 @@ footer .fa-brands:hover {
     color: darkorange; /* Ändra färg vid hover */
 }
 
-footer .footer_p {
-    color: whitesmoke; /* Standardfärg */
-    text-align: right; /* Justera texten till höger */
-    transition: color 0.3s ease; /* Mjuk övergång för hover */
-    word-wrap: break-word; /* Bryt långa ord och text */
-    overflow-wrap: break-word; /* Samma som word-wrap, för att bryta ord */
-    max-width: 50%; /* Sätt max-bredd för att undvika att texten går utanför */
-    display: block;
-    flex-grow: 1;
+footer .adr_1 {
+    font-family: "Amatic SC", serif;
+    text-align: right;
+    color: whitesmoke;
+    flex-grow: 1; /* Se till att adressen trycks åt höger */
+    white-space: nowrap; /* Förhindra att texten bryts */
+    overflow: hidden; /* Döljer överflödig text */
+    text-overflow: ellipsis; /* Visar "..." om texten är för lång */
 }
 
-/* Ändra färg vid hover */
-footer .footer_p:hover {
-    color: darkorange; 
-}
-
-/* Media query för att gömma texten på små skärmar */
+/* Media query för att hantera små skärmar */
 @media (max-width: 768px) {
-    footer .footer_p {
-        display: none; /* Dölj texten på skärmar mindre än 768px */
+    .adr_1 {
+        display: none; /* Dölj adressen på mindre skärmar */
     }
 }
 
@@ -206,29 +217,4 @@ footer .footer_p:hover {
     }
   }
 
-  /* /* Footer /
-footer {
-  background-color: rgba(255, 255, 255, 0.5);
-  color: white;
-  justify-content: space-between; / För att hålla ikoner och adress på varsin sida /
-}
-
-/ Ikoner i footern /
-.social-icons {
-  display: flex;
-  gap: 20px; / Lägg till lite avstånd mellan ikonerna /
-}
-
-footer i {
-  font-size: 2rem;
-  cursor: pointer;
-}
-
-footer i:hover {
-  color: #ff6347;
-}
-
-/ Adressen /
-.adress {
-  text-align: right; / Justera adressen till höger 
-} */
+ 

@@ -4,7 +4,6 @@ console.log(db.pagination); // samtliga kategorier tillgänglig i db
 console.log(db.bbqs); // lista med bbqs
 
 console.log("app.js har laddats.");
-import db from "./db.js"; // Importera mockdatan från db.js
 
 // Funktion för att skapa kort
 function createCards(data) {
@@ -20,9 +19,9 @@ function createCards(data) {
       <img src="${bbq.img}" alt="${bbq.name}">
       <h3>${bbq.name}</h3>
       <p>${bbq.dsc}</p>
-      <p><strong>Pris:</strong> $${bbq.price}</p>
-      <p><strong>Betyg:</strong> ${"⭐".repeat(bbq.rate)}</p>
-      <p><strong>Plats:</strong> ${bbq.country}</p>
+      <p><strong>Price:</strong> $${bbq.price}</p>
+      <p><strong>Rating:</strong> ${"⭐".repeat(bbq.rate)}</p>
+      <p><strong>Place:</strong> ${bbq.country}</p>
     `;
 
     // Lägg till kortet i container
@@ -50,21 +49,6 @@ db.bbqs.forEach(bbq => {
     document.body.appendChild(bbqItem);
 }); */
 
-/* Steaks
-console.log(db.steaks[0]); // Loggar den första steken
-console.log(db.steaks.filter(steak => steak.price < 50)); // Filtrerar Steaks under $50
-
-db.steaks.forEach(steak => {
-    const steakItem = document.createElement('section');
-    steakItem.innerHTML = `
-        <img src="${steak.img}" alt="${steak.name}">
-        <h2>${steak.name}</h2>
-        <p>${steak.dsc}</p>
-        <p>Price: $${steak.price}</p>
-    `;
-    document.body.appendChild(steakItem);
-}); */
-
 /* Ice Creams
 console.log(db['ice-cream'][0]); // Loggar den första rätten i "best-foods"
 console.log(db['ice-cream'].filter(iceCream => iceCream.price < 50)); // Filtrerar rätter under $50
@@ -78,21 +62,6 @@ db['ice-cream'].forEach(iceCream => {
         <p>Price: $${iceCream.price}</p>
     `;
     document.body.appendChild(iceCreamItem); 
-}); */
-
-/* Drinks
-console.log(db.drinks[0]); // Loggar den första drycken
-console.log(db.drinks.filter(drink => drink.price < 50)); // Filtrerar drycker under $50
-
-db.drinks.forEach(drink => {
-    const drinkItem = document.createElement('section');
-    drinkItem.innerHTML = `
-        <img src="${drink.img}" alt="${drink.name}">
-        <h2>${drink.name}</h2>
-        <p>${drink.dsc}</p>
-        <p>Price: $${drink.price}</p>
-    `;
-    document.body.appendChild(drinkItem);
 }); */
 
 /* 
@@ -146,3 +115,23 @@ steaks
 /* KOM-IHÅG!  
 I JavaScript är bindestreck (-) inte tillåtna i variabelnamn 
  objekt-nycklar utan att använda strängnotation */
+
+ /* 
+ "pagination": {
+    "bbqs": 59,
+    "best-foods": 60,
+    "breads": 58,
+    "burgers": 60,
+    "chocolates": 59,
+    "desserts": 43,
+    "drinks": 48,
+    "fried-chicken": 58,
+    "ice-cream": 27,
+    "pizzas": 54,
+    "porks": 60,
+    "sandwiches": 55,
+    "sausages": 60,
+    "steaks": 57,
+    "our-foods": 697
+  }
+    */
