@@ -7,45 +7,51 @@ h1 {
     color: darkorange;
 }
 
+/* Container för bilderna, med flexbox-inställningar för att ordna dem i rad och radbryta vid behov */
 .img-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-    padding: 20px;
+    display: flex;              /* Aktiverar flexbox */
+    flex-wrap: wrap;            /* Tillåter radbrytning vid platsbrist */
+    gap: 20px;                  /* Mellanrum mellan elementen */
+    justify-content: center;    /* Centrerar elementen horisontellt */
+    padding: 20px;              /* Ger utrymme runt hela containern */
 }
 
+/* Stilar för varje BBQ-objekt */
 .bbq-item {
-    background-color: darkred;
-    width: 30vw; 
-    max-width: 300px; 
-    min-width: 250px;
-    border: 1px solid gold;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
+    background-color: darkred;    /* Bakgrundsfärg på varje objekt */
+    width: 30vw;                  /* Bredden är 30% av viewport-bredden */
+    max-width: 300px;             /* Maximalt 300px bred */
+    min-width: 250px;             /* Minst 250px bred */
+    border: 1px solid gold;       /* Gul kantlinje */
+    border-radius: 8px;           /* Rundade hörn */
+    overflow: hidden;             /* Dölj innehåll som går utanför boxen */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Lätt skugga för djup */
+    text-align: center;           /* Centrerad textinriktning */
 }
 
+/* Bildstilar för varje BBQ-objekt */
 .bbq-item img {
-    width: 100%;
-    height: auto;
-    border-bottom: 1px solid darkred;
+    width: 100%;               /* Bilden täcker hela objektets bredd */
+    height: auto;              /* Bevarar bildens proportioner */
+    border-bottom: 1px solid darkred; /* Röd kantlinje under bilden */
 }
 
+/* Stilar för beskrivningen under bilderna */
 .description {
-    padding: 15px;
-    background-color: grey; 
-    text-align: left;
+    padding: 15px;             /* Inre marginal för text */
+    background-color: grey;    /* Grå bakgrund för kontrast */
+    text-align: left;          /* Vänsterjusterad text */
 }
 
+/* Titelstil i beskrivningen */
 .description h3 {
-    font-size: 1.2em;
-    color: darkred;
+    font-size: 1.2em;          /* Lite större textstorlek */
+    color: darkred;            /* Röd textfärg för rubriken */
 }
 
+/* Textstil för beskrivningens innehåll */
 .description p {
-    font-size: 1em;
-    color: white;
-    margin: 5px 0;
+    font-size: 1em;            /* Normal textstorlek */
+    color: white;              /* Vit text för bättre kontrast */
+    margin: 5px 0;             /* Utrymme mellan paragrafer */
 }
