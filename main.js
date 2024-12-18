@@ -16,6 +16,46 @@ db.bbqs.forEach(bbq => {
     document.body.appendChild(bbqItem);
 });
 
+const container = document.querySelector('.img-container');
+
+db.bbqs.forEach(item => {
+
+  const bbqItem = document.createElement('div');
+  bbqItem.classList.add('bbq-item'); 
+
+  
+  const imageElement = document.createElement('img');
+  imageElement.src = item.img;
+  imageElement.alt = item.name;
+
+  
+  const description = document.createElement('div');
+  description.classList.add('description');
+
+  
+  const name = document.createElement('h3');
+  name.textContent = item.name;
+
+  const dsc = document.createElement('p');
+  dsc.textContent = item.dsc;
+
+  const price = document.createElement('p');
+  price.textContent = `Price: $${item.price}`;
+
+  const rate = document.createElement('p');
+  rate.textContent = `Rating: ${item.rate} stars`;
+
+  const country = document.createElement('p');
+  country.textContent = `Country: ${item.country}`;
+
+  
+  description.append(name, dsc, price, rate, country);
+
+  bbqItem.append(imageElement, description);
+
+  container.appendChild(bbqItem);
+});
+
 /* Steaks
 console.log(db.steaks[0]); // Loggar den första steken
 console.log(db.steaks.filter(steak => steak.price < 50)); // Filtrerar Steaks under $50
