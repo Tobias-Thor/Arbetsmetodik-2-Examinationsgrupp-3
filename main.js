@@ -16,21 +16,6 @@ db.bbqs.forEach(bbq => {
     document.body.appendChild(bbqItem);
 });
 
-/* Steaks
-console.log(db.steaks[0]); // Loggar den första steken
-console.log(db.steaks.filter(steak => steak.price < 50)); // Filtrerar Steaks under $50
-
-db.steaks.forEach(steak => {
-    const steakItem = document.createElement('section');
-    steakItem.innerHTML = `
-        <img src="${steak.img}" alt="${steak.name}">
-        <h2>${steak.name}</h2>
-        <p>${steak.dsc}</p>
-        <p>Price: $${steak.price}</p>
-    `;
-    document.body.appendChild(steakItem);
-}); */
-
 /* Ice Creams
 console.log(db['ice-cream'][0]); // Loggar den första rätten i "best-foods"
 console.log(db['ice-cream'].filter(iceCream => iceCream.price < 50)); // Filtrerar rätter under $50
@@ -44,21 +29,6 @@ db['ice-cream'].forEach(iceCream => {
         <p>Price: $${iceCream.price}</p>
     `;
     document.body.appendChild(iceCreamItem); 
-}); */
-
-/* Drinks
-console.log(db.drinks[0]); // Loggar den första drycken
-console.log(db.drinks.filter(drink => drink.price < 50)); // Filtrerar drycker under $50
-
-db.drinks.forEach(drink => {
-    const drinkItem = document.createElement('section');
-    drinkItem.innerHTML = `
-        <img src="${drink.img}" alt="${drink.name}">
-        <h2>${drink.name}</h2>
-        <p>${drink.dsc}</p>
-        <p>Price: $${drink.price}</p>
-    `;
-    document.body.appendChild(drinkItem);
 }); */
 
 /* 
