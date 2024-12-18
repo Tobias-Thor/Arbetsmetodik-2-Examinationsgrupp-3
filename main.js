@@ -1,27 +1,8 @@
-// Loggar alla tillgängliga kategorier
-console.log(db.pagination);
-
-// BBQ (lägg till country) (experimentera och byt ut till alternativ kod)
-console.log(db.bbqs[0]); // Loggar den första BBQ:n
-console.log(db.bbqs.filter(bbq => bbq.price < 50)); // Filtrerar BBQs med pris under $50
-
-db.bbqs.forEach(bbq => {
-    const bbqItem = document.createElement('section');
-    bbqItem.innerHTML = `
-        <img src="${bbq.img}" alt="${bbq.name}">
-        <h2>${bbq.name}</h2>
-        <p>${bbq.dsc}</p>
-        <p>Price: $${bbq.price}</p>
-    `;
-    document.body.appendChild(bbqItem);
-});
-
-// Hämta containern där alla BBQ-objekt ska läggas in
+// Hämta containern där BBQ-objekten ska läggas in
 const container = document.querySelector('.img-container');
 
-// Loopar igenom varje BBQ-objekt i databasen
+// Loopar igenom varje BBQ-objekt i databasen och renderar dem
 db.bbqs.forEach(item => {
-
   // Skapar ett avsnitt för varje BBQ-objekt
   const bbqItem = document.createElement('section');
   bbqItem.classList.add('bbq-item');  // Lägger till en CSS-klass för stil

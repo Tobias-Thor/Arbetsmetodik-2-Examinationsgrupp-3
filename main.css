@@ -18,11 +18,10 @@ h1 {
 
 /* Stilar för varje BBQ-objekt */
 .bbq-item {
-    background-color: darkred;    /* Bakgrundsfärg på varje objekt */
+    background-color: rgba(83, 32, 31, 0.3); /* Transparent brun bakgrund med 80% opacitet */
     width: 30vw;                  /* Bredden är 30% av viewport-bredden */
     max-width: 300px;             /* Maximalt 300px bred */
     min-width: 250px;             /* Minst 250px bred */
-    border: 1px solid gold;       /* Gul kantlinje */
     border-radius: 8px;           /* Rundade hörn */
     overflow: hidden;             /* Dölj innehåll som går utanför boxen */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Lätt skugga för djup */
@@ -33,20 +32,18 @@ h1 {
 .bbq-item img {
     width: 100%;               /* Bilden täcker hela objektets bredd */
     height: auto;              /* Bevarar bildens proportioner */
-    border-bottom: 1px solid darkred; /* Röd kantlinje under bilden */
 }
 
 /* Stilar för beskrivningen under bilderna */
 .description {
     padding: 15px;             /* Inre marginal för text */
-    background-color: grey;    /* Grå bakgrund för kontrast */
     text-align: left;          /* Vänsterjusterad text */
 }
 
 /* Titelstil i beskrivningen */
 .description h3 {
     font-size: 1.2em;          /* Lite större textstorlek */
-    color: darkred;            /* Röd textfärg för rubriken */
+    color: #ffa500;            /* Röd textfärg för rubriken */
 }
 
 /* Textstil för beskrivningens innehåll */
