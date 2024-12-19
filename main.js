@@ -15,29 +15,15 @@ console.log("app.js har laddats.");
 
 // ==================== Andrés Code ====================
 
-// Create a variable 'toggleButton' and store the first element with the class name 'toggle-button'.
-// This is used to target the hamburger menu button for responsive navigation.
-const toggleButton = document.getElementsByClassName("toggle-button")[0]; 
 
-// Create a variable 'navbarLinks' and store the first element with the class name 'navbar-links'.
-// This represents the navigation menu links container.
-const navbarLinks = document.getElementsByClassName("navbar-links")[0]; 
+const toggleButton = document.getElementsByClassName("toggle-button")[0]; //Skapar variabeln toggleButton och hämtar första värdet i arrayen toggle-button
+const navbarLinks = document.getElementsByClassName("navbar-links")[0]; //Skapar variabeln navbarLinks och hämtar första värdet i arrayen navbar-links
 
-// Add a click event listener to the 'toggleButton' element.
-// This will execute the provided callback function when the button is clicked.
 toggleButton.addEventListener("click", () => {
-  // Log a message to the console to confirm the toggle button was clicked.
   console.log("Toggle button clicked!");
-
-  // Toggle the 'active' class on the 'navbarLinks' element.
-  // If the class is present, it is removed; if not, it is added.
-  // This controls whether the navigation menu is visible.
-  navbarLinks.classList.toggle("active"); 
-
-  // Toggle the 'active' class on the 'toggleButton' element itself.
-  // This might be used for visual effects, such as changing the button's appearance.
+  navbarLinks.classList.toggle("active"); //Om så visas menyn
   toggleButton.classList.toggle("active");
-}); 
+});
 // ==================== End of Andrés Code ====================
 
 

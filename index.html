@@ -2,10 +2,6 @@
 <!DOCTYPE html>
 <!-- Defines the root element of the document and sets the language to English -->
 <html lang="en">
-
-<!-- Contains metadata and links for the document -->
-<head>
-        <!-- Specifies the character encoding for the document as UTF-8 -->
     <meta charset="UTF-8">
         <!-- Ensures proper display and responsiveness on all devices -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -35,65 +31,29 @@
     
     <!-- Links the external CSS file for styling -->
     <link rel="stylesheet" href="main.css">
-    
-    <!-- Sets the favicon for the webpage -->
-    <link rel="icon" href="images/logoORfaviconMAYBE.ico" type="image/x-icon">
-    
-    <!--Link to Fontawesome website for the social media icons in the footer-->
-        <!-- Ensures access to FontAwesome icons -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-
-    <!-- Preconnects to Google Fonts to improve loading performance -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-        <!-- Allows preloading of font-related resources from Google -->
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <!-- Links custom fonts from Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Lobster&family=Mystery+Quest&family=Permanent+Marker&display=swap" rel="stylesheet">
-</head>
-
-<!-- Defines the main content of the document -->
-<body>
-    
-    <!-- Container for the navigation bar -->
+  </head>
+  <body>
     <header class="navbar">
-        <!-- Defines a section for the logo -->
-        <section class="logo">
-          <!-- Links the logo to the homepage -->
-          <a href="index.html">
-            <!-- Placeholder for the logo image -->
-            <img src="images/logo-500px.webp" alt="logo" />
-          </a>
-        </section>
-        <!-- Toggle button for responsive navigation -->
-        <a href="#" class="toggle-button">
-            <!-- First bar of the toggle button -->
-          <span class="bar bar-1"></span>
-            <!-- Second bar of the toggle button -->
-          <span class="bar bar-2"></span>
-            <!-- Third bar of the toggle button -->
-          <span class="bar bar-3"></span>
+      <section class="logo">
+        <a href="index.html">
+          <img src="logo-500px.webp" alt="" />
+          <!-- <img src="logo-200px.webp" alt="" /> -->
         </a>
-        <!-- Defines the navigation menu -->
-        <nav class="navbar-links">
-            <!-- Contains the list of navigation links -->
-          <ul>
-            <!-- Placeholder for navigation link -->
-            <li><a href="index.html">Menu</a></li>
-            <li><a href="index.html">Featured Beverages and Foods</a></li>
-          </ul>
-        </nav>
-      </header>
-
-    <!-- Additional header for the page -->
-    <header>
-            <!-- Displays the main logo with alt text for accessibility -->
-        <img class="main_image" src="images/taverna-bbq600px-medium-res.webp" alt="Taverna American BBQ logo" aria-label="Taverna Logo">
-            <!-- Main heading for theimages/taverna-bbq750px.webp
-        <h1>🍖Taverna American BBQ & Steakhouse🍖</h1>
+      </section>
+      <a href="#" class="toggle-button">
+        <span class="bar bar-1"></span>
+        <span class="bar bar-2"></span>
+        <span class="bar bar-3"></span>
+      </a>
+      <nav class="navbar-links">
+        <ul>
+          <li><a href="index.html">Menu</a></li>
+          <li><a href="index.html">Featured Beverages and Foods</a></li>
+          <li><a href="index.html">Feedback</a></li>
+        </ul>
+      </nav>
     </header>
-
-    <!-- Contains the main content of the page -->
+        <!-- Contains the main content of the page -->
     <main>
         <!-- Introduction paragraph -->
         <p>Welcome to Taverna – A New Era of Flavor and Community!
@@ -138,57 +98,7 @@
         togetherness. 
         We can’t wait to welcome you!
     </p>
-
-    <section id="featured-container" class="featured-items">
-        <!-- This section will be dynamically filled with the featured food items for today -->
-    </section>
-
-<!-- A section that contains dropdown controls for filtering food options based on different criteria -->
-     <section id="sort-controls">
-            <!-- Label and dropdown for sorting by price -->
-        <label for="sort-price">Sort by Price:</label>
-        <select id="sort-price">
-            <!-- Option for sorting from low to high price -->
-          <option value="asc">Low to High</option>
-            <!-- Option for sorting from high to low price -->
-          <option value="desc">High to Low</option>
-        </select>
-      
-            <!-- Label and dropdown for sorting by country -->
-        <label for="sort-country">Sort by Country:</label>
-        <select id="sort-country">
-            <!-- Option for sorting from A to Z (alphabetically) -->
-          <option value="asc">A to Z</option>
-            <!-- Option for sorting from Z to A (alphabetically) -->
-          <option value="desc">Z to A</option>
-        </select>
-      
-            <!-- Label and dropdown for sorting by rating -->
-        <label for="sort-rate">Sort by Rating:</label>
-        <select id="sort-rate">
-            <!-- Option for sorting from low to high rating -->
-          <option value="asc">Low to High</option>
-            <!-- Option for sorting from high to low rating -->
-          <option value="desc">High to Low</option>
-        </select>
-      
-            <!-- Label and dropdown for sorting by name -->
-        <label for="sort-name">Sort by Name:</label>
-        <select id="sort-name">
-            <!-- Option for sorting names from A to Z -->
-          <option value="asc">A to Z</option>
-            <!-- Option for sorting names from Z to A -->
-          <option value="desc">Z to A</option>
-        </select>
-      </section>      
-      
-    <!-- Section for BBQ offerings -->
-    <section id="bbq-container" aria-labelledby="bbq-container-heading">
-        <!-- Heading for the BBQ offerings section -->
-        <h2 id="bbq-container-heading">Explore Our BBQ Experience</h2>
-    </section>
-</main>
-
+    </main>
     <!-- Defines the footer content -->
     <footer class="footer_object">
         <!-- Navigation for social media links -->
@@ -208,12 +118,8 @@
             <!-- Address for the restaurant -->
             <address class="adr_1">Taverna American BBQ & Steakhouse, Barbeque St. 1 Springfield</address>
         </nav>
-    </footer>
-    
-    <!-- Links an external JavaScript file for database interactions -->
+    </footer>   
     <script src="db.js"></script>
-    <!-- Links an external JavaScript file for main functionality -->
     <script src="main.js"></script>
-    
-</body>
+  </body>
 </html>

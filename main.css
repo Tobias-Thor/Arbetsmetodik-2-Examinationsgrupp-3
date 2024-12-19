@@ -1,20 +1,5 @@
+
 /* STYLING FOR BODY */
-body {
-      /* Set the background image for the body using a URL to an image. */
-    background-image: url("https://images.unsplash.com/photo-1470406601945-7a6890b947b6?q=80&w=2970&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
-        /* Ensure the background image covers the entire viewport area. */
-    background-size: cover;
-        /* Center the background image within the viewport. */
-    background-position: center;
-        /* Keep the background image fixed in place while scrolling. */
-    background-attachment: fixed;
-        /* Apply a custom Google font called "Amatic SC" for text content. */
-    font-family: "Amatic SC", serif;
-        /* Add padding around the body content for spacing. */
-  padding: 20px;
-        /* Set the height of the body to fill the entire viewport height. */
-    height: 100vh;
-  }
 
   /* GOOGLE FONT */
   /* Style for text using the "Amatic SC" font in regular weight. */
@@ -26,168 +11,6 @@ body {
         /* Set the font style to normal. */
     font-style: normal;
   }
-
-  /* ========== Andrés Code ========== */
-  /* NAVBAR STYLING */
-  /* Styling for the navigation bar container. */
-  .navbar {
-        /* Set a semi-transparent background color for the navbar. */
-    background-color: rgba(43, 19, 7, 0.5);
-        /* Make the navbar stick to the top of the viewport on scroll. */
-    position: sticky;
-        /* Use flexbox to create a horizontal layout for child elements. */
-    display: flex;
-        /* Distribute space between child elements (logo and links). */
-    justify-content: space-between;
-        /* Align items in the navbar vertically at the center. */
-    align-items: center;
-  }
-  /* Styling for the logo inside the navbar. */
-  .navbar .logo {
-        /* Set a font size for the logo text. */
-    font-size: 1.5rem;
-        /* Add a small margin around the logo. */
-    margin: 0.5rem;
-  }
-  /* Styling for the logo image inside the logo container. */
-  .navbar .logo img {
-        /* Set the image width to 50% of its container. */
-    width: 50%;
-  }
-  /* Styling for the list of navigation links. */
-  .navbar .navbar-links ul {
-        /* Set the text color of the navigation links. */
-    color: #ffa500;
-        /* Remove default margins. */
-    margin: 0;
-        /* Remove default padding. */
-    padding: 0;
-        /* Use flexbox to display links in a horizontal row. */
-    display: flex;
-        /* Set a font size for the navigation links. */
-    font-size: 1.5rem;
-  }
-  /* Styling for individual list items in the navbar. */
-  .navbar .navbar-links ul li {
-        /* Remove default bullet points from list items. */
-    list-style: none;
-        /* Add a smooth background color transition on hover. */
-    transition: background-color 0.1s ease;
-        /* Round the edges of the list items. */
-    border-radius: 100px;
-        /* Add space between the list items. */
-    margin-left: 5px;
-  }
-  /* Styling for the anchor tags (links) inside list items. */
-  .navbar .navbar-links ul li a {
-        /* Add padding around the clickable area of links. */
-    padding: 1rem;
-        /* Use inline-block to make the link area behave like a block. */
-    display: inline-block;
-        /* Remove the underline from links. */
-    text-decoration: none;
-        /* Set the text color of links. */
-    color: #ffa500;
-  }
-  /* Styling for list items when hovered over. */
-  .navbar .navbar-links ul li:hover {
-        /* Change the background color of the list item on hover. */
-    background-color: #53201f;
-  }
-  /* Styling for the toggle button in mobile view. */
-  .navbar .toggle-button {
-        /* Set the stacking order to ensure visibility above other elements. */
-    z-index: 1000;
-        /* Position the button at the top-right corner. */
-    position: absolute;
-    top: 5rem;
-    right: 1rem;
-        /* Initially hide the toggle button (visible in mobile view only). */
-    display: none;
-        /* Use flexbox to stack toggle bars vertically. */
-    flex-direction: column;
-        /* Space bars evenly within the button. */
-    justify-content: space-between;
-        /* Set the width of the toggle button. */
-    width: 30px;
-        /* Set the height of the toggle button. */
-    height: 21px;
-  }
-  /* Styling for each bar in the toggle button. */
-  .navbar .toggle-button .bar {
-        /* Set the height of each bar. */
-    height: 3px;
-        /* Set the width of each bar to fill the toggle button. */
-    width: 100%;
-        /* Use the same color as the navigation links. */
-    background-color: #ffa500;
-        /* Round the edges of each bar. */
-    border-radius: 10px;
-        /* Add a smooth transition effect for transforms. */
-    transition: transform 0.2s linear;
-  }
-  /* Media query for screens with a maximum width of 768px (tablets/smartphones). */
-  @media screen and (max-width: 768px) {
-    .navbar {
-              /* Stack navbar items vertically in mobile view. */
-      flex-direction: column;
-              /* Align items to the start of the navbar. */
-      align-items: flex-start;
-    }
-    .navbar .toggle-button {
-              /* Display the toggle button in mobile view. */
-      display: flex;
-    }
-    .navbar .toggle-button.active .bar-1 {
-              /* Rotate the first bar to form part of an "X" icon. */
-      transform: rotate(45deg) translate(6.5px, 6.5px);
-    }
-    .navbar .toggle-button.active .bar-2 {
-              /* Hide the middle bar to complete the "X" icon. */
-      opacity: 0;
-    }
-    .navbar .toggle-button.active .bar-3 {
-              /* Rotate the third bar to form the other part of the "X" icon. */
-      transform: rotate(-45deg) translate(6.5px, -6.5px);
-    }
-    .navbar-links {
-              /* Hide the navigation links initially in mobile view. */
-      display: none;
-              /* Set the width of the navbar-links to take up full width. */
-      width: 100%;
-    }
-    .navbar-links ul {
-              /* Stack navigation links vertically in mobile view. */
-      width: 100%;
-      flex-direction: column;
-    }
-    .navbar-links li {
-              /* Center-align the text of each link in mobile view. */
-      text-align: center;
-    }
-    .navbar-links li a {
-              /* Make the links take up full width in mobile view. */
-      width: 100%;
-              /* Adjust padding for better spacing in mobile view. */
-      padding: 0.5rem 1rem;
-              /* Remove additional margins for compact display. */
-      margin: 0;
-    }
-    .navbar-links li:hover {
-              /* Change the background color on hover in mobile view. */
-      background-color: #3a1a0a;
-              /* Remove border-radius for a boxy look. */
-      border-radius: 1px;
-              /* Ensure the hover effect spans the full width of the link. */
-      width: 100%;
-    }
-    .navbar-links.active {
-              /* Display the navigation links when the toggle button is active. */
-      display: flex;
-    }
-  }
-    /* ========== End of Andrés Code ========== */
-
   /* ========== Tobias Code ========== */
   /* STYLING FOR LOGO IMAGE */
   .main_image {
@@ -416,39 +239,20 @@ p {
   /* ========== End of Tobias Code ========== */
 
 
-  /* Mathildas Code */
-/* MAIN CONTENT AREA */
-#bbq-container {
-  display: flex; /* Uses a flexbox layout to arrange child elements (menu items) in a row or column. */
-  flex-wrap: wrap; /* Allows items to wrap to the next line if they don’t fit within the container's width. */
-  justify-content: center; /* Centers the flex items (menu items) horizontally within the container. */
-  gap: 20px; /* Adds 20px of space between each menu item. */
-  padding: 20px; /* Adds padding around the inside of the container to provide space between the content and the container’s edges. */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
 }
 
-/* Menu-item styling */
-.menu-item {
-  background-color: rgba(43, 19, 7, 0.5); /* Sets a semi-transparent dark background for the menu item for aesthetic contrast. */
-  border-radius: 10px; /* Rounds the corners of the menu item for a smoother, more polished look. */
-  text-align: center; /* Centers the text and inline elements (like images) within the menu item. */
-  padding: 20px; /* Adds 20px of padding inside each menu item for better spacing. */
-  margin-bottom: 30px; /* Adds 30px of space below each menu item to separate them vertically. */
-  display: flex; /* Sets the display mode of the menu item to flexbox to control the layout of child elements. */
-  flex-direction: column; /* Arranges child elements (like images, text) in a vertical stack. */
-  align-items: center; /* Centers the child elements horizontally within the menu item. */
-  justify-content: center; /* Centers the child elements vertically within the menu item. */
-  width: 300px; /* Fixes the width of each menu item to 300px to create uniformity. */
-  box-sizing: border-box; /* Ensures that padding and border are included in the total width and height of the element. */
-  overflow: hidden; /* Prevents content from overflowing the container, maintaining a clean layout. */
-}
-
- /* For images inside the menu-item */
-.menu-item img {
-  width: 100%; /* Makes the image take up the full width of its container (menu item). */
-  height: 200px; /* Sets a fixed height of 200px for the image, maintaining consistent image sizes. */
-  object-fit: cover; /* Ensures the image fills the container without distortion, cropping it if necessary to cover the area. */
-  border-radius: 10px; /* Rounds the corners of the image to match the container’s styling. */
-  margin-bottom: 10px; /* Adds space below the image to separate it from the text or other content inside the menu item. */
+body {
+  background-image: url("https://images.unsplash.com/photo-1470406601945-7a6890b947b6?q=80&w=2970&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  min-height: 100vh;
 }
   
 /* Styling for h3 and p elements inside menu-item */
@@ -561,6 +365,107 @@ footer .adr_1:hover {
       grid-template-columns: 1fr; /* Adjusts the grid to display a single column for screens up to 480px wide, ensuring content fits well. */
   }
 }
-
-
- 
+.navbar {
+  background-color: rgba(43, 19, 7, 0.5);
+  position: sticky;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar .logo {
+  font-size: 1.5rem;
+  margin: 0.5rem;
+}
+.navbar .logo img {
+  width: 50%;
+  /* height: 50%; */
+  border-radius: 50%;
+}
+.navbar .navbar-links ul {
+  color: #ffa500;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  font-size: 1.5rem;
+}
+.navbar .navbar-links ul li {
+  list-style: none;
+  transition: background-color 0.1s ease;
+  border-radius: 100px;
+}
+.navbar .navbar-links ul li a {
+  padding: 1rem;
+  /* display: block; */
+  display: inline-block;
+  text-decoration: none;
+  color: #ffa500;
+}
+.navbar .navbar-links ul li:hover {
+  background-color: #53201f;
+}
+.navbar .toggle-button {
+  z-index: 1000;
+  position: absolute;
+  top: 5rem;
+  right: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+}
+.navbar .toggle-button .bar {
+  height: 3px;
+  width: 100%;
+  background-color: #ffa500;
+  border-radius: 10px;
+  transition: transform 0.2s linear;
+}
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .navbar .toggle-button {
+    display: flex;
+  }
+  .navbar .toggle-button.active .bar-1 {
+    transform: rotate(45deg) translate(6.5px, 6.5px);
+  }
+  .navbar .toggle-button.active .bar-2 {
+    opacity: 0;
+  }
+  .navbar .toggle-button.active .bar-3 {
+    transform: rotate(-45deg) translate(6.5px, -6.5px);
+  }
+  .navbar-links {
+    display: none;
+    width: 100%;
+  }
+  .navbar-links ul {
+    width: 100%;
+    flex-direction: column;
+  }
+  .navbar-links li {
+    text-align: center;
+    margin: 7px 0;
+  }
+  .navbar-links li a {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    margin: 0;
+  }
+  .navbar-links li:hover {
+    background-color: #3a1a0a;
+    border-radius: 1px;
+    width: 100%;
+  }
+  .navbar-links.active {
+    display: flex;
+  }
+  .navbar .logo img {
+    width: 50%;
+    border-radius: 50%;
+    transform: scale(0.9);
+  }
+}
