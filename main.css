@@ -1,9 +1,119 @@
-body {
-    background-color: black;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: white;
+* {
+  box-sizing: border-box;
+  margin: 0;
 }
 
-h1 {
-    color: darkorange;
+body {
+  background-image: url("https://images.unsplash.com/photo-1470406601945-7a6890b947b6?q=80&w=2970&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+.navbar {
+  background-color: rgba(43, 19, 7, 0.5);
+  position: sticky;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar .logo {
+  font-size: 1.5rem;
+  margin: 0.5rem;
+}
+.navbar .logo img {
+  width: 50%;
+  /* height: 50%; */
+  border-radius: 50%;
+}
+.navbar .navbar-links ul {
+  color: #ffa500;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  font-size: 1.5rem;
+}
+.navbar .navbar-links ul li {
+  list-style: none;
+  transition: background-color 0.1s ease;
+  border-radius: 100px;
+}
+.navbar .navbar-links ul li a {
+  padding: 1rem;
+  /* display: block; */
+  display: inline-block;
+  text-decoration: none;
+  color: #ffa500;
+}
+.navbar .navbar-links ul li:hover {
+  background-color: #53201f;
+}
+.navbar .toggle-button {
+  z-index: 1000;
+  position: absolute;
+  top: 5rem;
+  right: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+}
+.navbar .toggle-button .bar {
+  height: 3px;
+  width: 100%;
+  background-color: #ffa500;
+  border-radius: 10px;
+  transition: transform 0.2s linear;
+}
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .navbar .toggle-button {
+    display: flex;
+  }
+  .navbar .toggle-button.active .bar-1 {
+    transform: rotate(45deg) translate(6.5px, 6.5px);
+  }
+  .navbar .toggle-button.active .bar-2 {
+    opacity: 0;
+  }
+  .navbar .toggle-button.active .bar-3 {
+    transform: rotate(-45deg) translate(6.5px, -6.5px);
+  }
+  .navbar-links {
+    display: none;
+    width: 100%;
+  }
+  .navbar-links ul {
+    width: 100%;
+    flex-direction: column;
+  }
+  .navbar-links li {
+    text-align: center;
+    margin: 7px 0;
+  }
+  .navbar-links li a {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    margin: 0;
+  }
+  .navbar-links li:hover {
+    background-color: #3a1a0a;
+    border-radius: 1px;
+    width: 100%;
+  }
+  .navbar-links.active {
+    display: flex;
+  }
+  .navbar .logo img {
+    width: 50%;
+    border-radius: 50%;
+    transform: scale(0.9);
+  }
 }
