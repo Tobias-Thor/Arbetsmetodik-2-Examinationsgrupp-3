@@ -1,11 +1,11 @@
 // Hämta containern där BBQ-objekten ska läggas in
-const container = document.querySelector('.img-container');
+const container = document.querySelector('.img_container');
 
 // Loopar igenom varje BBQ-objekt i databasen och renderar dem
 db.bbqs.forEach(item => {
   // Skapar ett avsnitt för varje BBQ-objekt
   const bbqItem = document.createElement('section');
-  bbqItem.classList.add('bbq-item');  // Lägger till en CSS-klass för stil
+  bbqItem.classList.add('bbq_item');  // Lägger till en CSS-klass för stil
 
   // Skapar bild-elementet och sätter bildkälla och alternativ text
   const imageElement = document.createElement('img');

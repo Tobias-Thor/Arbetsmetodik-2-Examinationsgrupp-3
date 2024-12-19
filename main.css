@@ -8,7 +8,7 @@ h1 {
 }
 
 /* Container för bilderna, med flexbox-inställningar för att ordna dem i rad och radbryta vid behov */
-.img-container {
+.img_container {
     display: flex;              /* Aktiverar flexbox */
     flex-wrap: wrap;            /* Tillåter radbrytning vid platsbrist */
     gap: 20px;                  /* Mellanrum mellan elementen */
@@ -17,7 +17,7 @@ h1 {
 }
 
 /* Stilar för varje BBQ-objekt */
-.bbq-item {
+.bbq_item {
     background-color: rgba(83, 32, 31, 0.3); /* Transparent brun bakgrund med 80% opacitet */
     width: 30vw;                  /* Bredden är 30% av viewport-bredden */
     max-width: 300px;             /* Maximalt 300px bred */
@@ -29,7 +29,7 @@ h1 {
 }
 
 /* Bildstilar för varje BBQ-objekt */
-.bbq-item img {
+.bbq_item img {
     width: 100%;               /* Bilden täcker hela objektets bredd */
     height: auto;              /* Bevarar bildens proportioner */
 }
