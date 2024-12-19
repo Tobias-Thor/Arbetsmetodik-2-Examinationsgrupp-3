@@ -92,48 +92,103 @@ createCards(db); // Anropa funktionen för att skapa korten
 
 
 // ==================== Tobias Code ====================
+// For filtering food options...
+// Function to render the cards for BBQ items
+function renderCards(data) {
+  const container = document.getElementById("bbq-container"); // Get the element where the cards will be rendered
+  container.innerHTML = ""; // Clear any existing content in the container
+  data.forEach((item) => { // Loop through each item in the data array
+    const card = document.createElement("section"); // Create a new section element to represent each card
+    card.className = "menu-item"; // Assign the class 'menu-item' to the card for styling
+    // Set the inner HTML content of the card with dynamic data
+    card.innerHTML = `   
+      <img src="${item.img}" alt="${item.name}"> 
+      <h3>${item.name}</h3>
+      <p>${item.dsc}</p>
+      <p><strong>Price:</strong> $${item.price}</p>
+      <p><strong>Rating:</strong> ${"⭐".repeat(item.rate)}</p>
+      <p><strong>Place:</strong> ${item.country}</p>
+    `;
+    container.appendChild(card); // Append the card to the container
+  });
+}
 
-// En funktion som returnerar featured items för veckodagar
+// Function to sort data based on a given property and order
+function sortData(property, order) {
+  return db.bbqs.slice().sort((a, b) => { // Create a new array from db.bbqs and sort it
+    if (order === "asc") { // Check if the order is ascending
+      return a[property] > b[property] ? 1 : -1; // Compare the two items and return the sorted order
+    } else {
+      return a[property] < b[property] ? 1 : -1; // For descending order, reverse the comparison
+    }
+  });
+}
+
+// Event listener for price sorting
+document.getElementById("sort-price").addEventListener("change", (e) => { // Add a listener for changes in the price dropdown
+  const sortedData = sortData("price", e.target.value); // Sort the data based on price and the selected order
+  renderCards(sortedData); // Render the sorted cards
+});
+
+// Event listener for country sorting
+document.getElementById("sort-country").addEventListener("change", (e) => { // Add a listener for changes in the country dropdown
+  const sortedData = sortData("country", e.target.value); // Sort the data based on country and the selected order
+  renderCards(sortedData); // Render the sorted cards
+});
+
+// Event listener for rating sorting
+document.getElementById("sort-rate").addEventListener("change", (e) => { // Add a listener for changes in the rating dropdown
+  const sortedData = sortData("rate", e.target.value); // Sort the data based on rating and the selected order
+  renderCards(sortedData); // Render the sorted cards
+});
+
+// Event listener for name sorting
+document.getElementById("sort-name").addEventListener("change", (e) => { // Add a listener for changes in the name dropdown
+  const sortedData = sortData("name", e.target.value); // Sort the data based on name and the selected order
+  renderCards(sortedData); // Render the sorted cards
+});
+
+// Render all cards on page load
+renderCards(db.bbqs); // Call the renderCards function to display all BBQ items when the page loads
+
+
+/* TODAYS FEATURED FOOD ITEMS */
+// Function that returns featured items for each day of the week
 function getWeeklyFeaturedItems(data) {
-  // Slumpa fram featured items för varje dag i veckan
-  const allItems = [...data.bbqs];
-  const daysOfWeek = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+  // Randomize featured food items for each day in the week
+  const allItems = [...data.bbqs]; // Create a copy of the BBQ items array
+  const daysOfWeek = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]; // Array of days in the week
 
-  const weeklyFeatured = {};
-  daysOfWeek.forEach((day) => {
-    weeklyFeatured[day] = [];
-    while (weeklyFeatured[day].length < 2) { // 2 rätter per dag
-      const randomIndex = Math.floor(Math.random() * allItems.length);
-      const randomItem = allItems[randomIndex];
-      if (!weeklyFeatured[day].includes(randomItem)) {
-        weeklyFeatured[day].push(randomItem);
+  const weeklyFeatured = {};  // Object to store featured items for each day
+  daysOfWeek.forEach((day) => { // Loop through each day of the week
+    weeklyFeatured[day] = []; // Initialize an empty array for the day's featured items
+    while (weeklyFeatured[day].length < 2) { // Ensure that there are 2 items per day
+      const randomIndex = Math.floor(Math.random() * allItems.length); // Generate a random index
+      const randomItem = allItems[randomIndex];  // Select a random item from all items
+      if (!weeklyFeatured[day].includes(randomItem)) { // Check if the item is already featured for the day
+        weeklyFeatured[day].push(randomItem); // If not, add the item to the featured list for the day
       }
     }
   });
 
-  return weeklyFeatured;
+  return weeklyFeatured; // Return the object with weekly featured items
 }
 
-// Generera veckans featured items
-const weeklyFeaturedItems = getWeeklyFeaturedItems(db);
-console.log(weeklyFeaturedItems);
+// Generate the weekly featured items
+const weeklyFeaturedItems = getWeeklyFeaturedItems(db); // Call the function to get the featured items for the week
+console.log(weeklyFeaturedItems); // Log the weekly featured items to the console for debugging
 
-
-
-// Funktion för att hämta dagens featured items
+// Function to display the featured items for today
 function displayTodayFeatured(items) {
-  // Hämta dagens veckodag
-  const today = new Date().toLocaleString("en-US", { weekday: "long" }); // "Monday", "Tuesday", etc.
+  const today = new Date().toLocaleString("en-US", { weekday: "long" });  // Get the current weekday (e.g., "Monday")
+  const todayItems = items[today];  // Get the featured items for the current day
+  const container = document.getElementById("featured-container"); // Get the container where the featured items will be displayed
+  container.innerHTML = ""; // Clear any existing content in the container
 
-  // Hämta rätter för dagen
-  const todayItems = items[today];
-  const container = document.getElementById("featured-container");
-  container.innerHTML = ""; // Rensa tidigare innehåll
-
-  todayItems.forEach((item) => {
-    const card = document.createElement("section");
-    card.className = "featured-item";
-    card.innerHTML = `
+  todayItems.forEach((item) => { // Loop through each featured item for today
+    const card = document.createElement("section"); // Create a new section element for the card
+    card.className = "featured-item"; // Assign the class 'featured-item' for styling
+    card.innerHTML = ` 
       <img src="${item.img}" alt="${item.name}">
       <h3>${item.name}</h3>
       <p>${item.dsc}</p>
@@ -142,9 +197,9 @@ function displayTodayFeatured(items) {
       <p><strong>Place:</strong> ${item.country}</p>
       <h4>FEATURED DISH OF TODAY - TRY IT OUT!</h4>
     `;
-    container.appendChild(card);
+    container.appendChild(card); // Append the card to the featured container
   });
 }
 
-// Visa dagens featured items vid sidladdning
-displayTodayFeatured(weeklyFeaturedItems);
+// Display the featured items for today on page load
+displayTodayFeatured(weeklyFeaturedItems); // Call the function to display the featured items for today when the page loads

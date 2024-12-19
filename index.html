@@ -140,8 +140,47 @@
     </p>
 
     <section id="featured-container" class="featured-items">
-        <!-- Dagens featured kommer att genereras här -->
+        <!-- This section will be dynamically filled with the featured food items for today -->
     </section>
+
+<!-- A section that contains dropdown controls for filtering food options based on different criteria -->
+     <section id="sort-controls">
+            <!-- Label and dropdown for sorting by price -->
+        <label for="sort-price">Sort by Price:</label>
+        <select id="sort-price">
+            <!-- Option for sorting from low to high price -->
+          <option value="asc">Low to High</option>
+            <!-- Option for sorting from high to low price -->
+          <option value="desc">High to Low</option>
+        </select>
+      
+            <!-- Label and dropdown for sorting by country -->
+        <label for="sort-country">Sort by Country:</label>
+        <select id="sort-country">
+            <!-- Option for sorting from A to Z (alphabetically) -->
+          <option value="asc">A to Z</option>
+            <!-- Option for sorting from Z to A (alphabetically) -->
+          <option value="desc">Z to A</option>
+        </select>
+      
+            <!-- Label and dropdown for sorting by rating -->
+        <label for="sort-rate">Sort by Rating:</label>
+        <select id="sort-rate">
+            <!-- Option for sorting from low to high rating -->
+          <option value="asc">Low to High</option>
+            <!-- Option for sorting from high to low rating -->
+          <option value="desc">High to Low</option>
+        </select>
+      
+            <!-- Label and dropdown for sorting by name -->
+        <label for="sort-name">Sort by Name:</label>
+        <select id="sort-name">
+            <!-- Option for sorting names from A to Z -->
+          <option value="asc">A to Z</option>
+            <!-- Option for sorting names from Z to A -->
+          <option value="desc">Z to A</option>
+        </select>
+      </section>      
       
     <!-- Section for BBQ offerings -->
     <section id="bbq-container" aria-labelledby="bbq-container-heading">
