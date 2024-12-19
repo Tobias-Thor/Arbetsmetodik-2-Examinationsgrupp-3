@@ -92,7 +92,7 @@ function create_cards(data) {
       <p><strong>Rating:</strong> ${"⭐".repeat(bbq.rate)}</p>
       <p><strong>Country:</strong> ${bbq.country}</p>
       <button
-      class="add-to-cart"
+      class="add_to_cart"
       data-product="${bbq.name}"
       data-price="${bbq.price}"
     >
