@@ -36,8 +36,20 @@ db.bbqs.forEach(item => {
   const country = document.createElement('p');
   country.textContent = `Country: ${item.country}`;  // Sätter landet från databasen
 
+    // Skapar "Add to Cart"-knappen
+    const addToCartBtn = document.createElement('button');
+    addToCartBtn.textContent = "Add to Cart";
+    addToCartBtn.classList.add('add_to_cart');  
+  
+    // Lägger till klickhändelse på knappen
+    addToCartBtn.addEventListener('click', () => {
+      console.log(`${item.name} added to cart!`);
+      // Lägg till fler funktioner här, som att uppdatera en varukorg
+    });
+  
+    addToCartBtn.classList.add('add_to_cart');  
   // Lägger till alla beskrivningselement i beskrivningssektionen
-  description.append(name, dsc, price, rate, country);
+  description.append(name, dsc, price, rate, country, addToCartBtn);
 
   // Lägger till bild och beskrivning i BBQ-objektets sektion
   bbqItem.append(imageElement, description);

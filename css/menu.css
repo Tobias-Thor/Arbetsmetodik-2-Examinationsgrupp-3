@@ -64,6 +64,23 @@ h1 {
     margin: 10px 0;
 }
 
+/* Stil för "Add to Cart"-knappen */
+.add_to_cart {
+    background-color: #ffa500;  /* Bakgrundsfärg */
+    color: white;               /* Textfärg */
+    border: none;               /* Ingen kant */
+    padding: 10px 20px;         /* Inre marginal */
+    font-size: 16px;            /* Textstorlek */
+    cursor: pointer;            /* Pekare vid hovring */
+    border-radius: 5px;         /* Rundade hörn */
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Hovringseffekt */
+  .add_to_cart:hover {
+    background-color: #d13d23;  /* Mörkare bakgrundsfärg */
+  }
+
 /* ----- MEDIA QUERYS ----  */
 @media (max-width: 1024px) {
     #content {
