@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Popup för feedback -->
+    <section id="feedback_popup">
+      <article class="popup_content">
+        <span id="close_popup" class="close">&times;</span>
+        <h2>Ge din feedback</h2>
+        <textarea
+          id="feedback_text"
+          placeholder="Skriv din feedback här..."
+        ></textarea>
+        <section class="stars">
+          <span class="star" data-value="1">★</span>
+          <span class="star" data-value="2">★</span>
+          <span class="star" data-value="3">★</span>
+          <span class="star" data-value="4">★</span>
+          <span class="star" data-value="5">★</span>
+        </section>
+        <button id="send_feedback">Skicka</button>
+      </article>
+    </section>
+
+    <!-- Popup för tack-meddelande -->
+    <section id="thank_you_popup">
+      <article class="popup_content">
+        <span id="close_thank_you" class="close">&times;</span>
+        <h2 id="thank_you_message">Tack för din feedback!</h2>
+      </article>
+    </section>
+    <script src="feedback.js"></script>
+  </body>
+</html>
