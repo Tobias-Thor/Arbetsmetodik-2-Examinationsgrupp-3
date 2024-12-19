@@ -195,15 +195,15 @@ body {
     margin: 0 auto; /* Centers the image horizontally within its container. */
     max-width: 100%; /* Ensures the image scales down to fit its container's width without exceeding it. */
     height: auto; /* Maintains the image's aspect ratio during scaling. */
-    filter: sepia(50%); /* Applies a sepia tone effect at 50% intensity to the image. */
-    opacity: 0.8; /* Sets the image's opacity to 80%, making it slightly transparent. */
-    transition: filter 0.3s ease, opacity 0.3s ease; /* Creates a smooth transition for filter and opacity changes. */
+    /* filter: sepia(50%); /* Applies a sepia tone effect at 50% intensity to the image. */
+    /* opacity: 0.8; /* Sets the image's opacity to 80%, making it slightly transparent. */
+    /* transition: filter 0.3s ease, opacity 0.3s ease; /* Creates a smooth transition for filter and opacity changes. */
 }
 
-.main_image:hover {
-    filter: sepia(0%) brightness(1.2); /* Removes the sepia effect and increases brightness by 20% when hovered. */
-    opacity: 1; /* Restores the image to full opacity when hovered. */
-}
+/* .main_image:hover {
+    filter: sepia(0%) brightness(1.2); 
+    opacity: 1; 
+} */
 
 h1, h2 {
   font-family: "Amatic SC", serif; /* Sets a decorative serif font for the headings. */

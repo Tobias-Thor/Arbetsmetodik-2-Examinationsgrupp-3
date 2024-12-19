@@ -203,3 +203,5 @@ function displayTodayFeatured(items) {
 
 // Display the featured items for today on page load
 displayTodayFeatured(weeklyFeaturedItems); // Call the function to display the featured items for today when the page loads
+// ==================== End of Tobias Code ====================
+
