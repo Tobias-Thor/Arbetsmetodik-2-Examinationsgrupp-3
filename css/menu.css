@@ -1,0 +1,85 @@
+body {
+    background-image: url("https://images.unsplash.com/photo-1470406601945-7a6890b947b6?q=80&w=2970&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    padding: 20px;
+    min-height: 100vh; 
+}
+
+h1 {
+    color: darkorange;
+}
+
+/* Container för bilderna, med flexbox-inställningar för att ordna dem i rad och radbryta vid behov */
+.img_container {
+    display: flex;              /* Aktiverar flexbox */
+    flex-wrap: wrap;            /* Tillåter radbrytning vid platsbrist */
+    gap: 20px;                  /* Mellanrum mellan elementen */
+    justify-content: center;    /* Centrerar elementen horisontellt */
+    padding: 20px;              /* Ger utrymme runt hela containern */
+}
+
+/* Stilar för varje BBQ-objekt */
+.bbq_item {
+    background-color: rgba(43, 19, 7, 0.5);
+    border-radius: 10px;
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+/* Bildstilar för varje BBQ-objekt */
+.bbq_item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+/* Stilar för beskrivningen under bilderna */
+.description {
+    padding: 15px;             /* Inre marginal för text */
+    text-align: left;          /* Vänsterjusterad text */
+}
+
+/* Titelstil i beskrivningen */
+.description h3 {
+    font-size: 1.2em;          /* Lite större textstorlek */
+    color: #ffa500;            /* Röd textfärg för rubriken */
+}
+
+/* Textstil för beskrivningens innehåll */
+.description p {
+    color: #ffffff;
+    margin: 10px 0;
+}
+
+/* ----- MEDIA QUERYS ----  */
+@media (max-width: 1024px) {
+    #content {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    #content {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 480px) {
+    #content {
+      grid-template-columns: 1fr;
+    }
+  }
+  

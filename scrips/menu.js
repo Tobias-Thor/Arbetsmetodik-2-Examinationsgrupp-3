@@ -30,7 +30,7 @@ db.bbqs.forEach(item => {
 
   // Skapar paragraf för betyg
   const rate = document.createElement('p');
-  rate.textContent = `Rating: ${item.rate} stars`;  // Sätter betyget från databasen
+  rate.textContent = `Rating: ${"⭐".repeat(item.rate)}`;  // Sätter betyget från databasen
 
   // Skapar paragraf för ursprungsland
   const country = document.createElement('p');
