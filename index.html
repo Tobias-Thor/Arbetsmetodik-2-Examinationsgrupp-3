@@ -5,9 +5,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="main.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <section id="bbq-container"></section>
+    <!-- ----NAVBAR----  -->
+    <nav class="nav_bar">
+      <ul>
+        <li><button id="menu_btn">Meny</button></li>
+        <li><button id="drink_btn">Drinks</button></li>
+        <li><button id="featured_btn">Dagens Rätter</button></li>
+        <li>
+          <button id="order_btn">
+            <i class="fa-solid fa-utensils"></i><span id="cart_count">0</span>
+          </button>
+        </li>
+        <li>
+          <button id="feedback_btn">
+            <i class="fa-regular fa-comments"></i>
+          </button>
+        </li>
+      </ul>
+    </nav>
+    <!-- ----HEADER----  -->
+    <header>
+      <h1>Välkommen till vår BBQ Restaurang!</h1>
+      <p>Beställ din mat och dryck direkt från mobilen!</p>
+    </header>
+
+    <section id="bbq_container"></section>
+    <!-- Popup för feedback -->
+    <section id="feedback_popup">
+      <article class="popup_content">
+        <span id="close_popup" class="close">&times;</span>
+        <h2>Ge din feedback</h2>
+        <textarea
+          id="feedback_text"
+          placeholder="Skriv din feedback här..."
+        ></textarea>
+        <section class="stars">
+          <span class="star" data-value="1">★</span>
+          <span class="star" data-value="2">★</span>
+          <span class="star" data-value="3">★</span>
+          <span class="star" data-value="4">★</span>
+          <span class="star" data-value="5">★</span>
+        </section>
+        <button id="send_feedback">Skicka</button>
+      </article>
+    </section>
+
+    <!-- Popup för tack-meddelande -->
+    <section id="thank_you_popup">
+      <article class="popup_content">
+        <span id="close_thank_you" class="close">&times;</span>
+        <h2 id="thank_you_message">Tack för din feedback!</h2>
+      </article>
+    </section>
 
     <script type="module" src="main.js"></script>
     <script src="db.js"></script>
