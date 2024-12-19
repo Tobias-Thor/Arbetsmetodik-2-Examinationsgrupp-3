@@ -6,7 +6,7 @@ body {
   background-attachment: fixed;
   font-family: Georgia, "Times New Roman", Times, serif;
   padding: 20px;
-  height: 100vh;
+  min-height: 100vh; 
 }
 
 /* Navbar */
@@ -118,7 +118,7 @@ header p {
   margin: 10px 0;
 }
 
-.add_to_cart  {
+.add_to_cart {
   background-color: #53201f;
   color: #ffa500;
   font-weight: bold;
