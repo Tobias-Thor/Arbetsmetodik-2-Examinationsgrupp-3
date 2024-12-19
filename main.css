@@ -1,3 +1,245 @@
+
+/* STYLING FOR BODY */
+
+  /* GOOGLE FONT */
+  /* Style for text using the "Amatic SC" font in regular weight. */
+  .amatic-sc-regular {
+        /* Specify the font family to be used. */
+    font-family: "Amatic SC", serif;
+        /* Use normal font weight (400). */
+    font-weight: 400;
+        /* Set the font style to normal. */
+    font-style: normal;
+  }
+  /* ========== Tobias Code ========== */
+  /* STYLING FOR LOGO IMAGE */
+  .main_image {
+    display: block; /* Makes the image behave as a block-level element, allowing for centering. */
+    margin: 0 auto; /* Centers the image horizontally within its container. */
+    max-width: 100%; /* Ensures the image scales down to fit its container's width without exceeding it. */
+    height: auto; /* Maintains the image's aspect ratio during scaling. */
+    /* filter: sepia(50%); /* Applies a sepia tone effect at 50% intensity to the image. */
+    /* opacity: 0.8; /* Sets the image's opacity to 80%, making it slightly transparent. */
+    /* transition: filter 0.3s ease, opacity 0.3s ease; /* Creates a smooth transition for filter and opacity changes. */
+}
+
+/* .main_image:hover {
+    filter: sepia(0%) brightness(1.2); 
+    opacity: 1; 
+} */
+
+h1, h2 {
+  font-family: "Amatic SC", serif; /* Sets a decorative serif font for the headings. */
+  font-weight: bolder; /* Makes the text bold. */
+  font-style: oblique; /* Applies a slight slant to the text for stylistic emphasis. */
+  color: darkorange; /* Sets the primary text color to dark orange. */
+  text-align: center; /* Centers the text within its container. */
+  padding: 10px; /* Adds spacing inside the heading box. */
+  border-radius: 5px; /* Rounds the corners of the heading background. */
+  background-color: rgba(43, 19, 7, 0.5); /* Applies a semi-transparent dark background color. */
+  text-shadow: 
+      0 0 10px orange,   /* Creates an inner orange glow effect. */
+      0 0 20px red,      /* Adds an outer red glow. */
+      0 0 30px darkorange, /* Adds an additional dark orange glow. */
+      0 0 40px crimson;  /* Extends the glow with crimson for a fiery effect. */
+  animation: fiery-glow 1.5s infinite alternate; /* Animates the text glow with a fiery appearance. */
+}
+
+/* Styling for blockquote elements */
+blockquote {
+  font-family: "Amatic SC", serif; /* Uses the same decorative serif font as headings. */
+  font-size: 1.3em; /* Increases the font size slightly for emphasis. */
+  font-weight: bold; /* Makes the text bold. */
+  color: black; /* Sets the text color to black for contrast. */
+  margin: 20px auto; /* Adds vertical spacing and centers the blockquote within its parent. */
+  max-width: 700px; /* Limits the maximum width to 700px for better readability. */
+  padding: 15px; /* Adds spacing inside the blockquote box. */
+  background-color: rgba(121, 121, 121, 0.8); /* Applies a semi-transparent gray background. */
+  border-radius: 5px; /* Rounds the corners of the blockquote background. */
+  text-align: center; /* Centers the blockquote text. */
+  text-shadow: 
+      0 0 10px orange,   /* Creates an inner orange glow effect. */
+      0 0 20px red,      /* Adds an outer red glow. */
+      0 0 30px darkorange, /* Adds an additional dark orange glow. */
+      0 0 40px crimson;  /* Extends the glow with crimson for a fiery effect. */
+  background: linear-gradient(90deg, red, orange, yellow); /* Adds a gradient background simulating flames. */
+  animation: fiery-glow 1.5s infinite alternate; /* Animates the text glow for a dynamic fiery effect. */
+}
+
+/* Keyframes for glowing "fire" animation */
+@keyframes fiery-glow {
+  0% {
+      text-shadow: 
+          0 0 10px orange, /* Initial inner glow is orange. */
+          0 0 20px red, /* Initial outer glow is red. */
+          0 0 30px darkorange, /* Adds a dark orange glow at the start. */
+          0 0 40px crimson; /* Sets a deep crimson outermost glow. */
+  }
+  50% {
+      text-shadow: 
+          0 0 20px orange, /* Glow intensity increases to 20px for orange. */
+          0 0 30px red, /* Red glow expands further. */
+          0 0 40px yellow, /* Adds a yellow glow for warmth. */
+          0 0 50px crimson; /* Crimson glow expands for a dramatic effect. */
+  }
+  100% {
+      text-shadow: 
+          0 0 10px darkorange, /* Reduces the inner glow to dark orange. */
+          0 0 20px red, /* Maintains the red glow intensity. */
+          0 0 30px crimson, /* Crimson dominates at the end. */
+          0 0 40px orange; /* Ends with an orange outer glow for balance. */
+  }
+}
+
+/* STYLINGS FOR PARAGRAPHS */
+/* Styling for paragraph elements */
+p {
+  font-family: Verdana, Geneva, Tahoma, sans-serif; /* Uses a sans-serif font for a clean, modern look. */
+  font-size: 1.1em; /* Slightly increases the text size for better readability. */
+  line-height: 1.6; /* Adds spacing between lines for easier reading. */
+  color: whitesmoke; /* Sets a light text color for contrast against a dark background. */
+  margin: 20px auto; /* Adds vertical spacing and centers the paragraph horizontally within its container. */
+  max-width: 800px; /* Limits the paragraph's width to enhance readability by avoiding overly long lines. */
+  padding: 10px; /* Adds spacing inside the paragraph box. */
+  background-color: rgba(43, 19, 7, 0.5); /* Applies a semi-transparent dark brown background for emphasis. */
+  border-radius: 5px; /* Rounds the corners of the paragraph background for a softer appearance. */
+}
+
+/* STYLING FOR TODAYS FEATURED DISHES */
+/* Styling for today's featured dishes container */
+.featured-item {
+  background-color: rgba(43, 19, 7, 0.5); /* Applies a semi-transparent dark brown background for consistency. */
+  border: 5px ridge goldenrod; /* Adds a decorative ridged border with a goldenrod color. */
+  border-radius: 5px; /* Slightly rounded corners */
+  text-align: center; /* Centers the text content inside the container. */
+  padding: 10px; /* Adds spacing inside the container for better layout. */
+  margin-bottom: 30px; /* Adds vertical spacing below each featured item for separation. */
+  display: flex; /* Sets the container as a flexbox to arrange its child elements. */
+  flex-direction: column; /* Stacks child elements vertically inside the container. */
+  align-items: center; /* Horizontally centers child elements within the container. */
+  justify-content: center; /* Vertically centers child elements within the container. */
+  width: 300px; /* Sets a fixed width for the featured item container. */
+  box-sizing: border-box; /* Includes padding and border in the total width and height of the container. */
+  overflow: hidden; /* Ensures content stays within the container's bounds by hiding overflow. */
+}
+
+/* Styling for images inside the featured dishes container */
+.featured-item img {
+  width: 100%; /* Ensures the image spans the entire width of the container. */
+  height: 200px; /* Sets a fixed height for all images for uniformity. */
+  object-fit: cover; /* Scales the image to cover the container without distortion. */
+  border-radius: 10px; /* Rounds the image corners to match the container's style. */
+  margin-bottom: 10px; /* Adds spacing below the image for separation from text. */
+}
+
+/* Styling for headings and paragraphs inside the featured dishes container */
+.featured-item h3,
+.featured-item p {
+    color: #ffffff; /* Sets the text color to white for contrast against the background. */
+    margin: 10px 0; /* Adds vertical spacing between text elements. */
+}
+
+.featured-item h4,
+.featured-item p {
+    color: #ffffff; /* Sets the text color to white for consistent readability. */
+    margin: 10px 0; /* Adds vertical spacing between text elements. */
+}
+
+/* FILTERING FOOD OPTIONS */
+/* Styling for the container with ID 'sort-controls' */
+#sort-controls {
+  margin: 20px auto; /* Adds vertical spacing and centers the container horizontally. */
+  padding: 10px; /* Adds space inside the container for a better layout. */
+  background-color: rgba(43, 19, 7, 0.5); /* Sets a semi-transparent dark brown background. */
+  color: whitesmoke; /* Sets the text color to a light shade for contrast. */
+  border-radius: 5px; /* Rounds the corners of the container for a softer appearance. */
+  border: 1px solid rgba(255, 255, 255, 0.3); /* Adds a semi-transparent white border for subtle emphasis. */
+  text-align: center; /* Centers the text horizontally inside the container. */
+  display: flex; /* Sets the container as a flexbox to arrange child elements. */
+  flex-wrap: wrap; /* Allows items to wrap to the next row on smaller screens for responsiveness. */
+  justify-content: center; /* Horizontally centers all child elements. */
+  gap: 10px; /* Adds spacing between child elements for a clean layout. */
+}
+
+/* Styling for 'label' elements inside the 'sort-controls' container */
+#sort-controls label {
+  margin-right: 5px; /* Adds spacing to the right of the label for separation from adjacent elements. */
+  font-weight: bold; /* Makes the text bold for better visibility and emphasis. */
+  display: block; /* Ensures the label occupies its own line, stacking above dropdowns on smaller screens. */
+  margin-bottom: 5px; /* Adds spacing below the label to separate it from the next element. */
+}
+
+/* Styling for 'select' elements inside the 'sort-controls' container */
+#sort-controls select {
+  padding: 8px; /* Adds internal spacing for a comfortable clickable area. */
+  border: none; /* Removes the default border for a cleaner look. */
+  border-radius: 5px; /* Rounds the corners for a polished appearance. */
+  background-color: rgba(255, 255, 255, 0.9); /* Sets a semi-transparent white background. */
+  color: #2b1307; /* Sets the text color to dark brown for consistency. */
+  font-weight: bold; /* Makes the text bold for better readability. */
+  cursor: pointer; /* Changes the cursor to indicate interactivity. */
+  appearance: none; /* Removes the browser's default dropdown styling for customization. */
+  background-repeat: no-repeat; /* Prevents the background image from repeating. */
+  background-position: right 10px center; /* Positions the custom dropdown arrow to the right with proper alignment. */
+  background-size: 10px; /* Sets the size of the custom dropdown arrow. */
+  /* Uncomment the following line to add a custom dropdown arrow */
+  /* background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg xmlns%3D%22http%3A//www.w3.org/2000/svg%22 width%3D%2210%22 height%3D%2210%22 viewBox%3D%220 0 10 10%22%3E%3Cpath fill%3D%22%232b1307%22 d%3D%22M0 0l5 5 5-5z%22/%3E%3C/svg%3E'); */
+}
+
+/* Styling for 'select' elements inside the 'sort-controls' container when hovered */
+#sort-controls select:hover {
+  background-color: rgba(255, 255, 255, 0.8); /* Changes the background to a slightly less opaque white when hovered. */
+}
+
+/* Responsive layout for BBQ items */
+#bbq-container {
+  display: grid; /* Sets the container as a grid layout to arrange items efficiently. */
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Dynamically creates as many columns as can fit, with each column having a minimum width of 150px and sharing available space. */
+  gap: 20px; /* Adds 20px spacing between grid items for a clean layout. */
+  margin: 0 auto; /* Centers the grid container horizontally on the page. */
+  padding: 10px; /* Adds space inside the container for better spacing around items. */
+  max-width: 1200px; /* Limits the container's maximum width to improve readability and layout. */
+}
+
+/* Styling for individual menu items inside the BBQ container */
+.menu-item {
+  border: 1px solid rgba(255, 255, 255, 0.3); /* Adds a subtle semi-transparent border for definition. */
+  padding: 10px; /* Adds internal spacing for content inside the menu item. */
+  border-radius: 5px; /* Rounds the corners for a polished look. */
+  text-align: center; /* Centers the text content inside the menu item. */
+  background-color: rgba(255, 255, 255, 0.9); /* Sets a semi-transparent white background for the menu item. */
+  color: #2b1307; /* Sets the text color to a dark brown for contrast. */
+}
+
+/* Styling for images inside each menu item */
+.menu-item img {
+  max-width: 100%; /* Ensures the image fits within the width of its container without exceeding it. */
+  height: auto; /* Maintains the image's aspect ratio to prevent distortion. */
+  border-radius: 5px; /* Rounds the corners of the image to match the menu item's styling. */
+}
+
+/* Media query for adjustments on small screens (maximum width 768px) */
+@media (max-width: 768px) {
+  #sort-controls {
+    flex-direction: column; /* Stacks the sort controls vertically for better fit on narrow screens. */
+    align-items: center; /* Centers all items horizontally within the container. */
+    gap: 15px; /* Increases spacing between elements for readability on small screens. */
+  }
+
+  #sort-controls label,
+  #sort-controls select {
+    width: 100%; /* Expands labels and dropdowns to take up the full width of their container. */
+    text-align: center; /* Centers the text within the label and dropdown for alignment. */
+  }
+
+  #bbq-container {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Reduces the minimum column width to 120px to accommodate smaller screens. */
+  }
+}
+  /* ========== End of Tobias Code ========== */
+
+
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -12,7 +254,117 @@ body {
   padding: 20px;
   min-height: 100vh;
 }
+  
+/* Styling for h3 and p elements inside menu-item */
+.menu-item h3,
+.menu-item p {
+    color: #ffffff; /* Sets the text color of h3 and p elements to white for contrast against the dark background. */
+    margin: 10px 0; /* Adds 10px of space above and below the text elements for vertical separation. */
+}
 
+/* Styling for the add-to-cart button */
+.add-to-cart {
+  background-color: #761316; /* Sets a dark red background color for the add-to-cart button to match the theme. */
+  color: #ffffff; /* Sets the text color of the button to white for contrast against the background. */
+  border: none; /* Removes any default border around the button for a cleaner look. */
+  border-radius: 20px; /* Rounds the corners of the button to make it appear more button-like and modern. */
+  margin-top: 5px; /* Adds a small 5px margin above the button to separate it from other elements. */
+  padding: 15px 20px; /* Adds 15px of padding on the top and bottom, and 20px on the left and right to make the button bigger and more clickable. */
+}
+  
+/* Styling for add-to-cart button on hover */
+.add-to-cart:hover {
+  font-weight: bold; /* Makes the button text bold on hover to emphasize it. */
+  background-color: #ffffff; /* Changes the background color of the button to white when hovered. */
+  color: #761316; /* Changes the text color to dark red when the button is hovered over. */
+  cursor: pointer; /* Changes the cursor to a pointer (hand) to indicate that it is clickable. */
+}
+  /* End of Mathildas Code */
+
+/* Tobias Code */
+/* FOOTER STYLING */
+footer {
+  position: fixed; /* Ensures the footer stays at the bottom of the viewport regardless of scrolling. */
+  bottom: 0; /* Places the footer at the very bottom of the screen. */
+  left: 0; /* Aligns the footer to the left edge of the screen. */
+  width: 100%; /* Makes the footer span the full width of the viewport. */
+  background-color: rgba(43, 19, 7, 0.5); /* Sets a semi-transparent dark background color for the footer. */
+  padding: 7px; /* Adds padding around the content inside the footer for spacing. */
+  z-index: 1000; /* Ensures the footer appears on top of other elements with lower z-index values. */
+  display: flex; /* Uses Flexbox for layout to arrange child elements horizontally. */
+  justify-content: space-between; /* Distributes child elements with space between them. */
+  align-items: center; /* Vertically centers the child elements within the footer. */
+  flex-wrap: wrap; /* Allows the footer's content to wrap onto multiple lines for responsiveness. */
+  border-radius: 20px; /* Rounds the corners of the footer for a softer appearance. */
+  cursor: pointer; /* Changes the cursor to a pointer when hovering over the footer. */
+  box-sizing: border-box; /* Ensures padding and border are included in the element's total width and height. */
+}
+
+footer nav {
+  display: flex; /* Arranges social icons or navigation items horizontally using Flexbox. */
+  gap: 10px; /* Adds spacing between each item in the navigation. */
+  flex-grow: 1; /* Allows this section to take up available space, helping align the address text to the right. */
+}
+
+footer a {
+  text-decoration: none; /* Removes underlines from any anchor links within the footer. */
+}
+
+footer .fa-brands {
+  color: whitesmoke; /* Sets the default color of social media icons to a light, readable shade. */
+  font-size: 1.8rem; /* Increases the size of the icons for better visibility. */
+  transition: color 0.3s ease; /* Smoothly transitions the color when the user hovers over an icon. */
+}
+
+footer .fa-brands:hover {
+  color: goldenrod; /* Changes the color of the icons to goldenrod on hover for visual feedback. */
+}
+
+footer .adr_1 {
+  font-family: "Amatic SC", serif; /* Sets the font family for the address text to match the site's theme. */
+  text-align: right; /* Aligns the text to the right within its container. */
+  color: whitesmoke; /* Sets the text color to a light, readable shade. */
+  flex-grow: 1; /* Ensures the address takes up available space to push other elements to the left. */
+  white-space: nowrap; /* Prevents the address text from wrapping onto multiple lines. */
+  overflow: hidden; /* Hides any part of the text that overflows its container. */
+  text-overflow: ellipsis; /* Displays "..." at the end of the text if it is too long to fit. */
+}
+
+footer .adr_1:hover {
+  color: goldenrod; /* Changes the color of the address text to goldenrod when hovered over for feedback. */
+}
+
+/* Media query for the footer to handle small screens */
+@media (max-width: 768px) {
+  .adr_1 {
+      display: none; /* Hides the address section in the footer for screens narrower than 768px to save space. */
+  }
+}
+  /* End of Tobias Code */
+
+
+/* ----- MEDIA QUERIES FOR #content GRID LAYOUT ----- */
+
+/* Media query for medium-sized screens */
+@media (max-width: 1024px) {
+  #content {
+      grid-template-columns: repeat(3, 1fr); /* Adjusts the grid to display three equal-width columns for screens up to 1024px wide. */
+  }
+}
+
+/* Media query for small screens */
+@media (max-width: 768px) {
+  #content {
+      grid-template-columns: repeat(2, 1fr); /* Adjusts the grid to display two equal-width columns for screens up to 768px wide. */
+  }
+}
+
+/* Media query for extra small screens */
+@media (max-width: 480px) {
+  #content {
+      grid-template-columns: 1fr; /* Adjusts the grid to display a single column for screens up to 480px wide, ensuring content fits well. */
+  }
+}
 .navbar {
   background-color: rgba(43, 19, 7, 0.5);
   position: sticky;
