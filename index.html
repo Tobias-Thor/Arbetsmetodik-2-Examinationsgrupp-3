@@ -1,30 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="">
+    <meta name="author" content="Taverna BBQ & Steakhouse Team">
+    <meta name="description" content="Taverna American BBQ & Steakhouse – A bold transformation with over 40 years of culinary excellence, now focusing on authentic American BBQ. Grand reopening in early 2025!">
+    <meta name="keywords" content="Taverna, BBQ, steakhouse, American cuisine, restaurant, grand reopening, food, grill, culinary excellence">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Taverna American BBQ & Steakhouse">
+    <meta property="og:description" content="Discover a new era of flavor and community at Taverna. From Italian classics to bold American BBQ – grand reopening in early 2025!">
+    <meta property="og:image" content="images/logo-500px.webp">
+    <meta property="og:url" content="https://www.taverna-bbq.com">
+    <meta property="og:type" content="website">
     <title>Taverna American BBQ & Steakhouse</title>
     <link rel="stylesheet" href="main.css">
-</head>
-<body>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" role="img" aria-labelledby="title desc">
-        <title id="title">Taverna BBQ & Steakhouse Logo</title>
-        <desc id="desc">A modern yet rustic logo with a vintage barbecue grill and steak knife, featuring the text "Taverna BBQ & Steakhouse" and a tagline "Tradition & Renewal".</desc>
-        <rect width="800" height="400" fill="#f8f4f0" />
-        <circle cx="400" cy="200" r="180" fill="#8b0000" />
-        <text x="400" y="160" font-family="'Georgia', serif" font-size="48" fill="#fff" text-anchor="middle">Taverna</text>
-        <text x="400" y="210" font-family="'Georgia', serif" font-size="36" fill="#fff" text-anchor="middle">BBQ & Steakhouse</text>
-        <line x1="250" y1="260" x2="550" y2="260" stroke="#fff" stroke-width="2" />
-        <text x="400" y="300" font-family="'Georgia', serif" font-size="24" fill="#fff" text-anchor="middle">Tradition & Renewal</text>
-        <path d="M300 200 L270 230 L300 260" fill="#f8f4f0" />
-        <path d="M500 200 L530 230 L500 260" fill="#f8f4f0" />
-      </svg>
-    <h1>Taverna American BBQ & Steakhouse</h1>
-    <footer class="footer_object">
+    <link rel="stylesheet" href="feeback.css">
+    <link
+    rel="shortcut icon"
+    href="/images/logoORfaviconMAYBE.ico"
+    type="image/x-icon"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com/" />
+  </head>
+  <body>
+    <header class="navbar">
+      <section class="logo">
+        <a href="index.html">
+          <img src="/images/logo-500px.webp" alt="" />
+        </a>
+      </section>
+      <a href="#" class="toggle-button">
+        <span class="bar bar-1"></span>
+        <span class="bar bar-2"></span>
+        <span class="bar bar-3"></span>
+      </a>
+      <nav class="navbar-links">
+        <ul>
+          <li><a href="/pages/menu.html">Menu</a></li>
+          <li><a href="#" id="feedback_button">Feedback</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <img class="main_image" src="/images/taverna-bbq600px-medium-res.webp" alt="">
+        <p>Welcome to Taverna – A New Era of Flavor and Community!
 
-    </footer>    
-<script src="db.js"></script>
-<script src="main.js"></script>
-</body>
+            With over 40 years of culinary excellence, 
+            Taverna is stepping into the future with 
+            a new concept and renewed passion. 
+            From the classic tastes of Italian cuisine 
+            to a bold transformation – we are proud to 
+            introduce our new focus: 
+            American BBQ at its finest.
+        
+            Under the leadership of new owners, 
+            Taverna has been revitalized, 
+            where tradition meets innovation. 
+            Here, you’re invited into a world of 
+            sizzling grills, juicy cuts of meat, 
+            and rich flavors that evoke the heart 
+            of the American South. Every dish is 
+            crafted with care and fire, using only 
+            the finest ingredients to create an 
+            authentic BBQ experience.
+        
+            Our ambiance is as tasteful as our food 
+            – a harmonious blend of modern design 
+            and rustic charm. You’ll find a relaxed 
+            atmosphere that makes every visit memorable, 
+            whether it’s for a family dinner, an 
+            after-work gathering, or a festive evening 
+            with friends.</p>
+        <blockquote>Grand reopening in early 2025 – An experience worth the wait.</blockquote>
+    <p> Stay tuned and get ready to let your 
+        taste buds dance in an atmosphere 
+        that celebrates both 
+        history and innovation. 
+        Taverna is ready to become your new 
+        favorite destination for food and 
+        togetherness. 
+        We can’t wait to welcome you!
+    </p>
+    <section class="img_container"></section>
+    </main>
+        <!-- Popup för feedback -->
+        <section id="feedback_popup">
+          <article class="popup_content">
+            <span id="close_popup" class="close">&times;</span>
+            <h2>Ge din feedback</h2>
+            <textarea
+              id="feedback_text"
+              placeholder="Skriv din feedback här..."
+            ></textarea>
+            <section class="stars">
+              <span class="star" data-value="1">★</span>
+              <span class="star" data-value="2">★</span>
+              <span class="star" data-value="3">★</span>
+              <span class="star" data-value="4">★</span>
+              <span class="star" data-value="5">★</span>
+            </section>
+            <button id="send_feedback">Skicka</button>
+          </article>
+        </section>
+    
+        <!-- Popup för tack-meddelande -->
+        <section id="thank_you_popup">
+          <article class="popup_content">
+            <span id="close_thank_you" class="close">&times;</span>
+            <h2 id="thank_you_message">Tack för din feedback!</h2>
+          </article>
+        </section> 
+
+        <footer class="footer_object">
+          <nav aria-label="Social media links">
+              <a href="https://www.facebook.com" target="_blank" class="social-link" aria-label="Visit our Facebook page">
+                  <i class="fa-brands fa-facebook"></i>
+              </a>
+              <a href="https://www.instagram.com" target="_blank" class="social-link" aria-label="Visit our Instagram profile">
+                  <i class="fa-brands fa-instagram"></i>
+              </a>
+              <a href="https://www.youtube.com" target="_blank" class="social-link" aria-label="Visit our YouTube channel">
+                  <i class="fa-brands fa-youtube"></i>
+              </a>
+              <address class="adr_1">Taverna American BBQ & Steakhouse, Barbeque St. 1 Springfield</address>
+          </nav>
+      </footer>  
+    <script src="db.js"></script>
+    <script src="main.js"></script>
+    <script src="feedback.js"></script>
+  </body>
 </html>

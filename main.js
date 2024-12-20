@@ -1,114 +1,66 @@
-// Loggar alla tillgängliga kategorier
 console.log(db.pagination);
+console.log(db.bbqs);
+console.log("app.js har laddats.");
 
-// BBQ (lägg till country) (experimentera och byt ut till alternativ kod)
-console.log(db.bbqs[0]); // Loggar den första BBQ:n
-console.log(db.bbqs.filter(bbq => bbq.price < 50)); // Filtrerar BBQs med pris under $50
+const toggleButton = document.getElementsByClassName("toggle-button")[0]; //Skapar variabeln toggleButton och hämtar första värdet i arrayen toggle-button
+const navbarLinks = document.getElementsByClassName("navbar-links")[0]; //Skapar variabeln navbarLinks och hämtar första värdet i arrayen navbar-links
 
-db.bbqs.forEach(bbq => {
-    const bbqItem = document.createElement('section');
-    bbqItem.innerHTML = `
-        <img src="${bbq.img}" alt="${bbq.name}">
-        <h2>${bbq.name}</h2>
-        <p>${bbq.dsc}</p>
-        <p>Price: $${bbq.price}</p>
-    `;
-    document.body.appendChild(bbqItem);
+toggleButton.addEventListener("click", () => {
+  console.log("Toggle button clicked!");
+  navbarLinks.classList.toggle("active"); //Om så visas menyn
+  toggleButton.classList.toggle("active");
 });
 
-/* Steaks
-console.log(db.steaks[0]); // Loggar den första steken
-console.log(db.steaks.filter(steak => steak.price < 50)); // Filtrerar Steaks under $50
+function displayRandomItems(db) {
+  // Get the container where the random items will be displayed
+  const container = document.querySelector(".img_container");
 
-db.steaks.forEach(steak => {
-    const steakItem = document.createElement('section');
-    steakItem.innerHTML = `
-        <img src="${steak.img}" alt="${steak.name}">
-        <h2>${steak.name}</h2>
-        <p>${steak.dsc}</p>
-        <p>Price: $${steak.price}</p>
+  // Clear any existing content in the container
+  container.innerHTML = "";
+
+  // Generate two random indices to select items
+  const randomIndices = [];
+  while (randomIndices.length < 1) {
+    const randomIndex = Math.floor(Math.random() * db.bbqs.length);
+    if (!randomIndices.includes(randomIndex)) {
+      randomIndices.push(randomIndex);
+    }
+  }
+
+  // Loop through the selected items and display them
+  randomIndices.forEach((index) => {
+    const item = db.bbqs[index];
+
+    // Create a new card for each item
+    const card = document.createElement("section");
+    card.className = "bbq_item";
+
+    // Create an image element for the item
+    const image = document.createElement("img");
+    image.src = item.img;
+    image.alt = item.name;
+
+    // Append the image to the card
+    card.append(image);
+
+    // Create a description section for the item
+    const descriptionContainer = document.createElement("section");
+    descriptionContainer.classList.add("description");
+    descriptionContainer.innerHTML = `
+      <h3>${item.name}</h3>
+      <p>${item.dsc}</p>
+      <p><strong>Price:</strong> $${item.price}</p>
+      <p><strong>Rating:</strong> ${"⭐".repeat(item.rate)}</p>
+      <p><strong>Place:</strong> ${item.country}</p>
     `;
-    document.body.appendChild(steakItem);
-}); */
 
-/* Ice Creams
-console.log(db['ice-cream'][0]); // Loggar den första rätten i "best-foods"
-console.log(db['ice-cream'].filter(iceCream => iceCream.price < 50)); // Filtrerar rätter under $50
+    // Append the description to the card
+    card.append(descriptionContainer);
 
-db['ice-cream'].forEach(iceCream => {
-    const iceCreamItem = document.createElement('section');
-    iceCreamItem.innerHTML = `
-        <img src="${iceCream.img}" alt="${iceCream.name}">
-        <h2>${iceCream.name}</h2>
-        <p>${iceCream.dsc}</p>
-        <p>Price: $${iceCream.price}</p>
-    `;
-    document.body.appendChild(iceCreamItem); 
-}); */
+    // Add the card to the container
+    container.appendChild(card);
+  });
+}
 
-/* Drinks
-console.log(db.drinks[0]); // Loggar den första drycken
-console.log(db.drinks.filter(drink => drink.price < 50)); // Filtrerar drycker under $50
-
-db.drinks.forEach(drink => {
-    const drinkItem = document.createElement('section');
-    drinkItem.innerHTML = `
-        <img src="${drink.img}" alt="${drink.name}">
-        <h2>${drink.name}</h2>
-        <p>${drink.dsc}</p>
-        <p>Price: $${drink.price}</p>
-    `;
-    document.body.appendChild(drinkItem);
-}); */
-
-/* 
-
-bbqs
-: 
-59
-best-foods
-: 
-60
-breads
-: 
-58
-burgers
-: 
-60
-chocolates
-: 
-59
-desserts
-: 
-43
-drinks
-: 
-48
-fried-chicken
-: 
-58
-ice-cream
-: 
-27
-our-foods
-: 
-697
-pizzas
-: 
-54
-porks
-: 
-60
-sandwiches
-: 
-55
-sausages
-: 
-60
-steaks
-: 
-57 */
-
-/* KOM-IHÅG!  
-I JavaScript är bindestreck (-) inte tillåtna i variabelnamn 
- objekt-nycklar utan att använda strängnotation */
+// Call the function to display 2 random items
+displayRandomItems(db);

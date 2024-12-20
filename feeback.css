@@ -1,0 +1,92 @@
+/* Popup bakgrund */
+#feedback_popup,
+#thank_you_popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+
+/* Popup-innehåll */
+.popup_content {
+  background-color: rgba(191, 191, 191, 0.7);
+  color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  position: relative;
+  width: 400px;
+  max-width: 90%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+textarea {
+  width: 95%;
+  height: 80px;
+  background-color: rgba(255, 255, 255, 0.663);
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  resize: none;
+}
+
+textarea:focus {
+  border-color: rgb(255, 217, 0);
+  outline: none;
+}
+
+/* Stjärnor */
+.stars {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  margin: 10px 0;
+}
+
+.star {
+  font-size: 24px;
+  color: #ccc;
+  cursor: pointer;
+}
+
+.star.selected {
+  color: gold;
+}
+
+/* Knapp för att skicka feedback */
+#send_feedback {
+  background-color: #53201f;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  border: none;
+  padding: 15px 25px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+#send_feedback:hover {
+  background-color: #8a3735;
+}
+
+/* Stäng-knappen för både feedback och tack-popup */
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #4e4e4e;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 9999;
+}
+
+.close:hover {
+  color: black;
+}

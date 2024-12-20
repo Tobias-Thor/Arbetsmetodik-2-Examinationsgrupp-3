@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Taverna BBQ & Steakhouse Team" />
+    <meta
+      name="description"
+      content="Taverna American BBQ & Steakhouse – A bold transformation with over 40 years of culinary excellence, now focusing on authentic American BBQ. Grand reopening in early 2025!"
+    />
+    <meta
+      name="keywords"
+      content="Taverna, BBQ, steakhouse, American cuisine, restaurant, grand reopening, food, grill, culinary excellence"
+    />
+    <meta name="robots" content="index, follow" />
+    <title>Taverna American BBQ & Steakhouse Menu</title>
+    <link rel="stylesheet" href="/css/menu.css" />
+    <link rel="stylesheet" href="/feeback.css" />
+    <link
+      rel="shortcut icon"
+      href="/images/logoORfaviconMAYBE.ico"
+      type="image/x-icon"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com/" />
+  </head>
+  <body>
+    <header class="navbar">
+      <section class="logo">
+        <a href="/index.html">
+          <img src="/images/logo-500px.webp" alt="" />
+        </a>
+      </section>
+      <a href="#" class="toggle-button">
+        <span class="bar bar-1"></span>
+        <span class="bar bar-2"></span>
+        <span class="bar bar-3"></span>
+      </a>
+      <nav class="navbar-links">
+        <ul>
+          <li>
+            <a href="#" id="order_button">
+              Current Order: <span id="cart_count">0</span>
+            </a>
+          </li>
+          <li><a href="#" id="feedback_button">Feedback</a></li>
+        </ul>
+      </nav>
+      <section id="order-popup" class="hidden">
+        <article class="popup-content">
+          <button id="close-popup" class="close-btn">&times;</button>
+          <h2>Our Order</h2>
+          <section id="order-list"></section>
+          <p>Total: <span id="total-price">0</span> kr</p>
+          <button id="submit-order">Skicka beställning</button>
+        </article>
+      </section>
+
+      <section id="thank-you-popup" class="hidden">
+        <article class="popup-content">
+          <h2>Tack för din beställning!</h2>
+          <h4>Betalning sker vid bordet!</h4>
+        </article>
+      </section>
+    </header>
+    <h1>Our Mouth Watering BBQ Menu</h1>
+    <section id="sort-controls">
+      <label for="sort-price">Sort by Price:</label>
+      <select id="sort-price">
+        <option value="asc">Low to High</option>
+        <option value="desc">High to Low</option>
+      </select>
+      <label for="sort-country">Sort by Country:</label>
+      <select id="sort-country">
+        <option value="asc">A to Z</option>
+        <option value="desc">Z to A</option>
+      </select>
+      <label for="sort-rate">Sort by Rating:</label>
+      <select id="sort-rate">
+        <option value="asc">Low to High</option>
+        <option value="desc">High to Low</option>
+      </select>
+      <label for="sort-name">Sort by Name:</label>
+      <select id="sort-name">
+        <option value="asc">A to Z</option>
+        <option value="desc">Z to A</option>
+      </select>
+    </section>
+    <!-- Container för bilder från db.js -->
+    <section class="img_container"></section>
+    <footer class="footer_object"></footer>
+    <!-- Popup för feedback -->
+    <section id="feedback_popup">
+      <article class="popup_content">
+        <span id="close_popup" class="close">&times;</span>
+        <h2>Ge din feedback</h2>
+        <textarea
+          id="feedback_text"
+          placeholder="Skriv din feedback här..."
+        ></textarea>
+        <section class="stars">
+          <span class="star" data-value="1">★</span>
+          <span class="star" data-value="2">★</span>
+          <span class="star" data-value="3">★</span>
+          <span class="star" data-value="4">★</span>
+          <span class="star" data-value="5">★</span>
+        </section>
+        <button id="send_feedback">Skicka</button>
+      </article>
+    </section>
+
+    <!-- Popup för tack-meddelande -->
+    <section id="thank_you_popup">
+      <article class="popup_content">
+        <span id="close_thank_you" class="close">&times;</span>
+        <h2 id="thank_you_message">Tack för din feedback!</h2>
+      </article>
+    </section>
+    <footer class="footer_object">
+      <nav aria-label="Social media links">
+        <a
+          href="https://www.facebook.com"
+          target="_blank"
+          class="social-link"
+          aria-label="Visit our Facebook page"
+        >
+          <i class="fa-brands fa-facebook"></i>
+        </a>
+        <a
+          href="https://www.instagram.com"
+          target="_blank"
+          class="social-link"
+          aria-label="Visit our Instagram profile"
+        >
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a
+          href="https://www.youtube.com"
+          target="_blank"
+          class="social-link"
+          aria-label="Visit our YouTube channel"
+        >
+          <i class="fa-brands fa-youtube"></i>
+        </a>
+        <address class="adr_1">
+          Taverna American BBQ & Steakhouse, Barbeque St. 1 Springfield
+        </address>
+      </nav>
+    </footer>
+    <script src="/scrips/db.js"></script>
+    <script src="/feedback.js"></script>
+    <script src="/scrips/menu.js"></script>
+    <script src="/Order.js"></script>
+  </body>
+</html>

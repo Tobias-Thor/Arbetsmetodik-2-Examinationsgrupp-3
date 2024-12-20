@@ -1,8 +1,3 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-}
-
 body {
   background-image: url("https://images.unsplash.com/photo-1470406601945-7a6890b947b6?q=80&w=2970&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
   background-size: cover;
@@ -26,6 +21,7 @@ body {
 }
 .navbar .logo img {
   width: 50%;
+  /* height: 50%; */
   border-radius: 50%;
 }
 .navbar .navbar-links ul {
@@ -42,6 +38,7 @@ body {
 }
 .navbar .navbar-links ul li a {
   padding: 1rem;
+  /* display: block; */
   display: inline-block;
   text-decoration: none;
   color: #ffa500;
@@ -68,68 +65,25 @@ body {
   transition: transform 0.2s linear;
 }
 
-/* STYLING FOR IMAGE */
-.main_image {
-  display: block;
-  margin: 0 auto;
-  max-width: 100%;
-  height: auto;
+h1 {
+  color: darkorange;
 }
 
-/* Styling for blockquote elements */
-blockquote {
-  font-family: "Amatic SC", serif;
-  font-size: 1.3em;
-  font-weight: bold;
-  color: black;
-  margin: 20px auto;
-  max-width: 700px;
-  padding: 15px;
-  background-color: rgba(121, 121, 121, 0.8);
-  border-radius: 5px;
-  text-align: center;
-  text-shadow: 0 0 10px orange, 0 0 20px red, 0 0 30px darkorange,
-    0 0 40px crimson;
-  background: linear-gradient(90deg, red, orange, yellow);
-  animation: fiery-glow 1.5s infinite alternate;
-}
-
-/* Keyframes for glowing "fire" animation */
-@keyframes fiery-glow {
-  0% {
-    text-shadow: 0 0 10px orange, 0 0 20px red, 0 0 30px darkorange,
-      0 0 40px crimson;
-  }
-  50% {
-    text-shadow: 0 0 20px orange, 0 0 30px red, 0 0 40px yellow,
-      0 0 50px crimson;
-  }
-  100% {
-    text-shadow: 0 0 10px darkorange, 0 0 20px red, 0 0 30px crimson,
-      0 0 40px orange;
-  }
-}
-
-/* STYLINGS FOR PARAGRAPHS */
-p {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 1.1em;
-  line-height: 1.6;
-  color: whitesmoke;
-  margin: 20px auto;
-  max-width: 800px;
-  padding: 10px;
-  background-color: rgba(43, 19, 7, 0.5);
-  border-radius: 5px;
-}
-
-/* STYLING FOR TODAYS FEATURED DISHES */
+/* Container för bilderna, med flexbox-inställningar för att ordna dem i rad och radbryta vid behov */
 .img_container {
+  display: flex; /* Aktiverar flexbox */
+  flex-wrap: wrap; /* Tillåter radbrytning vid platsbrist */
+  gap: 20px; /* Mellanrum mellan elementen */
+  justify-content: center; /* Centrerar elementen horisontellt */
+  padding: 20px; /* Ger utrymme runt hela containern */
+}
+
+/* Stilar för varje BBQ-objekt */
+.bbq_item {
   background-color: rgba(43, 19, 7, 0.5);
-  border: 5px ridge goldenrod;
-  border-radius: 5px;
+  border-radius: 10px;
   text-align: center;
-  padding: 10px;
+  padding: 20px;
   margin-bottom: 30px;
   display: flex;
   flex-direction: column;
@@ -140,8 +94,8 @@ p {
   overflow: hidden;
 }
 
-/* Styling for images inside the featured dishes container */
-.img_container img {
+/* Bildstilar för varje BBQ-objekt */
+.bbq_item img {
   width: 100%;
   height: 200px;
   object-fit: cover;
@@ -149,17 +103,41 @@ p {
   margin-bottom: 10px;
 }
 
-/* Styling for headings and paragraphs inside the featured dishes container */
-.img_container h3,
-.img_container p {
+/* Stilar för beskrivningen under bilderna */
+.description {
+  padding: 15px; /* Inre marginal för text */
+  text-align: left; /* Vänsterjusterad text */
+}
+
+/* Titelstil i beskrivningen */
+.description h3 {
+  font-size: 1.2em; /* Lite större textstorlek */
+  color: #ffa500; /* Röd textfärg för rubriken */
+}
+
+/* Textstil för beskrivningens innehåll */
+.description p {
   color: #ffffff;
   margin: 10px 0;
 }
 
-.img_container h4,
-.img_container p {
-  color: #ffffff;
-  margin: 10px 0;
+/* Stil för "Add to Cart"-knappen */
+.add_to_cart {
+  background-color: #53201f;
+  color: #ffa500;
+  font-weight: bold;
+  border: none;
+  border-radius: 20px;
+  margin-top: 5px;
+  padding: 15px 20px;
+}
+
+/* Hovringseffekt */
+.add_to_cart:hover {
+  font-weight: bold;
+  background-color: #ffa500;
+  color: #53201f;
+  cursor: pointer;
 }
 
 /* FILTERING FOOD OPTIONS */
@@ -205,53 +183,6 @@ p {
   background-color: rgba(255, 255, 255, 0.8);
 }
 
-/* Responsive layout for BBQ items */
-#bbq-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 20px;
-  margin: 0 auto;
-  padding: 10px;
-  max-width: 1200px;
-}
-
-/* Styling for individual menu items inside the BBQ container */
-.menu-item {
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  padding: 10px;
-  border-radius: 5px;
-  text-align: center;
-  background-color: rgba(255, 255, 255, 0.9);
-  color: #2b1307;
-}
-
-/* Styling for images inside each menu item */
-.menu-item img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 5px;
-}
-
-/* Media query for adjustments on small screens (maximum width 768px) */
-@media (max-width: 768px) {
-  #sort-controls {
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-  }
-
-  #sort-controls label,
-  #sort-controls select {
-    width: 100%;
-    text-align: center;
-  }
-
-  #bbq-container {
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-  }
-}
-
-/* FOOTER STYLING */
 footer {
   position: fixed;
   bottom: 0;
@@ -303,10 +234,22 @@ footer .adr_1:hover {
   color: goldenrod;
 }
 
-/* Media query for the footer to handle small screens */
+/* ----- MEDIA QUERYS ----  */
+@media (max-width: 1024px) {
+  #content {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
 @media (max-width: 768px) {
-  .adr_1 {
-    display: none;
+  #content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  #content {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -356,5 +299,98 @@ footer .adr_1:hover {
     width: 50%;
     border-radius: 50%;
     transform: scale(0.9);
+  }
+}
+
+/* ----DÖLJER POP UP---- */
+.hidden {
+  display: none;
+}
+
+/* ----BESTÄLLNING OCH POP UP---- */
+
+#order-popup,
+#thank-you-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 40%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+}
+
+.popup-content {
+  text-align: center;
+}
+
+#order-popup #order-list {
+  max-height: 300px;
+  overflow-y: auto;
+  margin: 10px 0;
+}
+
+/* ----STÄNG KRYSSET PÅ BESTÄLLNING POP UP----  */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  color: #333;
+}
+
+.close-btn:hover {
+  color: #ff6347;
+}
+
+/* ----SKICKA ORDER KNAPP----  */
+#submit-order {
+  border: none;
+  border-radius: 20px;
+  background-color: #53201f;
+  color: #fff;
+  padding: 15px;
+  cursor: pointer;
+}
+
+#submit-order:hover {
+  background-color: #8a3735;
+  color: #ffffff;
+}
+
+/* ----TA BORT FRÅN BESTÄLLNING----  */
+.remove-item {
+  border: none;
+  border-radius: 20px;
+  background-color: #53201f;
+  color: #fff;
+  padding: 10px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+/* Responsivitet för mobil */
+@media (max-width: 768px) {
+  #popup {
+    width: 100%; /* Gör popupen bredare på små skärmar */
+    max-width: 400px; /* Maximal bredd på mobiler */
+    padding: 15px;
+  }
+
+  #popup .popup-content {
+    padding: 15px;
+  }
+
+  #popup .close-btn {
+    font-size: 1.2rem; /* Krymp fontstorleken på stängknappen för mobiler */
+    top: 5px;
+    right: 5px;
   }
 }
